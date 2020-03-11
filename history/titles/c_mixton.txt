@@ -1,0 +1,5 @@
+2656.1.1={
+	holder=1810246
+	law=enatic_cognatic_succession
+	liege=d_zacatecas
+}

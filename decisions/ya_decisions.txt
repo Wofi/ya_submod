@@ -1,0 +1,89 @@
+decisions = {
+	ya_reorg_sol = { 
+		only_playable = yes
+		is_high_prio = yes
+		ai_check_interval = 8
+		
+		potential = {
+			religion = sol_invicta
+			k_sol_invicta = { has_holder = no }
+			NOT = {
+				has_alternate_start_parameter = { key = religion_names value = random }
+			}
+			primary_title = { higher_tier_than = COUNT }
+		}
+		
+		allow = {
+			primary_title = { higher_tier_than = DUKE }
+			completely_controls = d_mexico
+			# todo: require restoring the cathedral
+			num_of_holy_sites = 3
+			prestige = 250
+			OR = {
+				AND = {
+					piety = 500
+					NOT = { trait = zealous }
+				}
+				AND = {
+					piety = 250
+					trait = zealous
+				}
+			}
+		}
+		
+		effect = {
+			piety = -250
+			character_event = {
+				id = ya_sol_invicta.1
+				tooltip = EVTTOOLTIP_solreorg
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	ya_sol_avatar = { 
+		only_playable = yes
+		is_high_prio = yes
+		ai_check_interval = 8
+		
+		potential = {
+			religion = church_of_erendira
+			k_sol_invicta = { has_holder = no }
+			NOT = {
+				has_alternate_start_parameter = { key = religion_names value = random }
+			}
+			primary_title = { higher_tier_than = COUNT }
+		}
+		
+		allow = {
+			primary_title = { higher_tier_than = DUKE }
+			completely_controls = d_mexico
+			# todo: require restoring the cathedral
+			num_of_holy_sites = 3
+			prestige = 250
+			OR = {
+				AND = {
+					piety = 500
+					NOT = { trait = zealous }
+				}
+				AND = {
+					piety = 250
+					trait = zealous
+				}
+			}
+		}
+		
+		effect = {
+			piety = -250
+			grant_title = d_church_of_erendira
+			character_event = {
+				id = ya_sol_invicta.4
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

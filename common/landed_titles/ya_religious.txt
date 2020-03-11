@@ -1,0 +1,46 @@
+k_sol_invicta = {
+	color = { 0.9 0.6 0.0 }
+	color2 = { 1.0 1.0 1.0}
+	
+	capital = 1767 # Mexico City
+	
+	title = "HIGH_PRIEST"
+	title_female = "HIGH_PRIESTESS"
+	foa = "SOL_FOA"
+	
+	religion = sol_invicta
+	controls_religion = sol_invicta
+	landless = yes
+	dignity = 100
+	primary = yes
+	short_name = yes
+	dynasty_title_names = no
+	assimilate = no
+	
+	allow = {
+		always = no
+	}
+}
+
+d_church_of_erendira = {
+	color = { 0.9 0.9 0.0 }
+	color2 = { 1.0 1.0 1.0}
+	
+	capital = 1767 # Mexico City
+	
+	title = "LORD_RADIANT"
+	title_female = "LADY_RADIANT"
+	foa = "SOL_FOA"
+	
+	religion = church_of_erendira
+	controls_religion = church_of_erendira
+	dignity = 100
+	primary = yes
+	short_name = yes
+	dynasty_title_names = no
+	caliphate = yes
+	
+	allow = {
+		always = no
+	}
+}

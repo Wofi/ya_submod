@@ -1,0 +1,280 @@
+1325002={
+	name="Zuangua"
+	dynasty=1350000
+	culture=purepecha
+	religion=sol_invicta
+	martial=8
+	diplomacy=3
+	stewardship=5
+	intrigue=4
+	learning=6
+	trait=mystic
+	trait=ambitious
+	trait=cruel
+	trait=greedy
+	trait=brave
+	trait=zealous
+	father=1325001
+	add_lover = 1325050
+	2631.11.28={
+		birth=yes
+		add_claim=d_mexico
+	}
+	2655.9.9={add_matrilineal_spouse=1810215}
+	2706.6.3={death=yes}
+}
+
+1325004={
+	name="Mítani"
+	female=yes
+	dynasty=1350000
+	culture=purepecha
+	religion=sol_invicta
+	martial=5
+	diplomacy=5
+	stewardship=4
+	intrigue=7
+	learning=4
+	trait=mastermind_theologian
+	trait=poet
+	trait=possessed
+	trait=quick
+	trait=chaste
+	trait=humble
+	trait=gregarious
+	father=1325001
+	2643.1.31={
+		birth=yes
+		add_claim=d_mexico
+	}
+	2713.6.3={death=yes}
+}
+
+1325010={
+	name="Tsí Tsini"
+	female = yes
+	dynasty=1428006
+	culture=nahua
+	religion=sol_invicta
+	martial=8
+	diplomacy=4
+	stewardship=4
+	intrigue=3
+	learning=8
+	trait=midas_touched
+	trait=ugly
+	trait=content
+	2626.4.28={birth=yes}
+	#2660.1.1={add_claim=d_mexico}
+	2701.6.3={death=yes}
+}
+
+1325050={
+	name="No Kósti"
+	female=yes
+	dna="plnbhiaemgf"
+	culture=purepecha
+	religion=sol_invicta
+	martial=3
+	diplomacy=2
+	stewardship=4
+	intrigue=2
+	learning=7
+	trait=underhanded_rogue
+	trait=patient
+	trait=honest
+	2634.1.1={birth=yes}
+	2692.7.1={death=yes}
+}
+
+1325052={
+	name="Na Xani"
+	female=yes
+	dynasty=1350000
+	dna="nenbjjmchkc"
+	culture=purepecha
+	religion=sol_invicta
+	martial=4
+	diplomacy=2
+	stewardship=6
+	intrigue=3
+	learning=8
+	trait = bastard
+	trait = haughty
+	trait = brooding
+	father=1325002
+	mother=1325050
+	2659.5.25={birth=yes}
+	2690.9.15={death=yes}
+}
+
+1325053={
+	name="Mintsita"
+	female=yes
+	dynasty=1350000
+	dna="nenbjjacepf"
+	culture=purepecha
+	religion=sol_invicta
+	martial=4
+	diplomacy=4
+	stewardship=2
+	intrigue=5
+	learning=5
+	trait = bastard
+	trait = haughty
+	trait = conscientious
+	trait = willful
+	father=1325002
+	mother=1325050
+	2662.1.10={birth=yes}
+	2708.10.25={death=yes}
+}
+
+1325054={
+	name="Sanítku"
+	dynasty=1350000
+	dna="nenjjjacmgc"
+	culture=purepecha
+	religion=sol_invicta
+	martial=7
+	diplomacy=4
+	stewardship=7
+	intrigue=5
+	learning=5
+	trait = bastard
+	trait = brooding
+	trait = conscientious
+	father=1325002
+	mother=1325050
+	2664.7.31={birth=yes}
+	2716.11.5={death=yes}
+}
+
+1325055={
+	name="Gyazob"
+	dynasty=1350000
+	dna="penbjjmfcgf"
+	culture=purepecha
+	religion=sol_invicta
+	martial=6
+	diplomacy=3
+	stewardship=1
+	intrigue=7
+	learning=5
+	trait = bastard
+	trait = indolent
+	father=1325002
+	mother=1325050
+	2666.3.18={birth=yes}
+	2723.5.5={death=yes}
+}
+
+1810215={
+	name="Pagótami"
+	female = yes
+	dynasty=1260000
+	culture=raramuri
+	religion=sol_invicta
+	trait=charismatic_negotiator
+	trait=cynical
+	trait=arbitrary
+	trait=envious
+	trait=brave
+	trait=honest
+	father=1325118
+	2627.5.8={birth=yes}
+	2659.1.31={add_matrilineal_spouse=1325002}
+	2691.7.13={death=yes}
+}
+
+1810216={
+	name="Birétari"
+	female=yes
+	dynasty=1260000
+	culture=raramuri
+	religion=sol_invicta
+	trait = curious
+	trait = willful
+	trait = rowdy
+	father=1325002
+	mother=1810215
+	2659.5.8={birth=yes}
+	2691.7.13={death=yes}
+}
+
+1810217={
+	name="Soma"
+	dynasty=1260000
+	culture=raramuri
+	religion=sol_invicta
+	trait = willful
+	trait = rowdy
+	father=1325002
+	mother=1810215
+	2664.5.8={birth=yes}
+	2691.7.13={death=yes}
+}
+
+1810218={
+	name="Cháti"
+	female = yes
+	dynasty=1260017
+	culture=raramuri
+	religion=sol_invicta
+	trait=sympathy_oldworld
+	trait=kind
+	trait=slothful
+	2650.2.4={birth=yes}
+}
+
+1810240={
+	name="Icaré"
+	female = yes
+	dynasty=1260046
+	culture=raramuri
+	religion=sol_invicta
+	trait=brilliant_strategist
+	trait=holy_warrior
+	trait=strong
+	trait=ambitious
+	trait=zealous
+	trait=greedy
+	give_nickname=nick_the_bold
+	2627.5.8={birth=yes}
+	2648.1.31={add_spouse=1810241}
+	2701.7.13={death=yes}
+}
+
+1810241={
+	name="Candameña"
+	culture=raramuri
+	religion=sol_invicta
+	trait=thrifty_clerk
+	trait=content
+	trait=patient
+	trait=zealous
+	trait=greedy
+	2628.5.8={birth=yes}
+	2648.1.31={add_spouse=1810240}
+	2701.7.13={death=yes}
+}
+
+1810245={
+	name="Sahuí"
+	female = yes
+	dynasty=1428026
+	culture=raramuri
+	religion=sol_invicta
+	2612.5.8={birth=yes}
+	2701.7.13={death=yes}
+}
+
+1810246={
+	name="Sehué"
+	female = yes
+	dynasty=1428033
+	culture=raramuri
+	religion=sol_invicta
+	2631.5.8={birth=yes}
+	2701.7.13={death=yes}
+}

@@ -1,0 +1,5 @@
+2662.1.1={
+	liege=d_durango
+	law=enatic_cognatic_succession
+	holder=1810218
+}

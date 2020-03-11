@@ -1,0 +1,15 @@
+c_durango = {
+	holy_site = church_of_erendira
+}
+c_guanajuato = {
+	holy_site = church_of_erendira
+}
+c_mixton = {
+	holy_site = church_of_erendira
+}
+c_mexico = {
+	holy_site = church_of_erendira
+}
+c_patzcuaro = {
+	holy_site = church_of_erendira
+}

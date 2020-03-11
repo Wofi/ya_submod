@@ -1,0 +1,60 @@
+k_sol_invicta;Sun Priesthood;;;;;;;;;x
+k_sol_invicta_adj;Sun Priest;;;;;;;;;x
+SOL_FOA;Your Radiance;;;;;;;;;x
+HIGH_PRIEST;High Priest;;;;;;;;;x
+HIGH_PRIESTESS;High Priestess;;;;;;;;;x
+
+church_of_erendira;Church of Eréndira;;;;;;;;;x
+d_church_of_erendira;Solar Priesthood;;;;;;;;;x
+d_church_of_erendira_adj;Solar;;;;;;;;;x
+LORD_RADIANT;Lord Radiant;;;;;;;;;x
+LADY_RADIANT;Lady Radiant;;;;;;;;;x
+
+ya_reorg_sol;Reorganize the Jurihiata Ikikunari faith;;;;;;;;;x
+ya_reorg_sol_desc;The followers of Eréndira have traditionally relied on local hedge priests. Now that we have ousted the agents of darkness from [c_mexico.GetName], it may be in our best interest to found a more formal priesthood...;;;;;;;;;x
+EVTTOOLTIP_solreorg;Invite all Jurihiata Ikikunari priests to [c_mexico.GetName];;;;;;;;;x
+
+EVTNAME_solreorg;The Grand Council of [c_mexico.GetName];;;;;;;;;x
+EVTDESC_solreorg;Priests from all over Mexico are beginning to gather in [c_mexico.GetName]. Over the coming weeks, guided by the icon of Eréndira at the heart of the Great Temple, these holy women will decide the future of the faith. Of course, as the one who made this possible, I have a great deal of influence over the direction of the council...;;;;;;;;;x
+EVTOPTA_solreorg;Let the priests do what they do best.;;;;;;;;;x
+solreorg_priests;The faith will be lead by an independent theocracy based out of [c_mexico.GetName], similar in some ways to that of the Cross-Worshippers.\n§YThe new religious head will be granted the whole Duchy of [d_mexico.GetName].§!;;;;;;;;;x
+EVTOPTB_solreorg;It would only be fair if I gave my own opinion...;;;;;;;;;x
+solreorg_temporal;Declare yourself the avatar of Eréndira.\n§RThis will create a permanent split in the faith!§!;;;;;;;;;x
+
+EVTNAME_solpriests;The Grand Council of [c_mexico.GetName];;;;;;;;;x
+EVTDESC_solpriests;The Jurihiata Ikikunari sun-worshippers were once confined to the Mexican highlands, but now they have rival Sagrado Corazon and Mictlantec kingdoms, taking Mexico City. Now, at the behest of [From.GetTitledFirstName], sun-priests from all around Mexico have gathered at the newly-rechristened Grand Temple of Eréndira to found a formal priesthood.;;;;;;;;;x
+EVTOPTA_solref;And why should I care about the bickering of fools?;;;;;;;;;x
+EVTOPTB_solref;May the Light never again die out!;;;;;;;;;x
+EVTOPTC_solref;These heathen upstarts have gone too far!;;;;;;;;;x
+EVTOPTD_solref;A new future for their faith? Interesting...;;;;;;;;;x
+EVTOPTE_solref;Will they bring peace or war to Mexico?;;;;;;;;;x
+EVTOPTF_solref;Interesting tidings for our Southwestern brothers...;;;;;;;;;x
+EVTOPTG_solref;Another faith which values the better sex? Interesting...;;;;;;;;;x
+
+EVTNAME_soltemporal;The Avatar of Eréndira;;;;;;;;;x
+EVTDESC_soltemporal;The Jurihiata Ikikunari sun-worshippers were once confined to the Mexican highlands, but now they have pushed back rival Sagrado Corazon and Mictlantec kingdoms, taking Mexico City. [From.GetTitledName] has taken this opportunity to march into the Grand Temple of Eréndira and proclaim [From.GetReflexivePronoun] the Avatar of Eréndira, making the beginning of a new era for their faith.;;;;;;;;;x
+EVTOPTA_soltemporal;This heathen [From.GetTitle] is making a mockery of our faith!;;;;;;;;;x
+EVTOPTB_soltemporal;With my guidance, we will destroy the darkness once and for all!;;;;;;;;;x
+
+secret_religious_society_church_of_erendira;[GetReligiousCommunityName_church_of_erendira];;;;;;;;;;;;;x
+secret_religious_society_REAL_church_of_erendira;Children of the Sun;;;;;;;;;;;;x
+alt_start_community_name_church_of_erendira;The [church_of_erendira.GetName] Faithful;;;;;;;;;;;;;x
+secret_religious_society_church_of_erendira_desc;[GetReligiousSocietyDesc_church_of_erendira];;;;;;;;;;;;;x
+secret_religious_society_church_of_erendira_desc_REAL;The secret followers of Eréndira have little need for foreign faiths. The answer to every theological challenge and every moment of doubt is right in the sky above them, every day, without fail. It is what brings life and hope, deserving of every prostration. Just as Eréndira never fails to bring warmth to the earth and drive the Darkness away, her followers will rise on the other side of their own long night.;;;;;;;;;;;;;x
+secretly_convert_to_church_of_erendira_holy_site;Secretly Convert to Church of Eréndira;;;;;;;;;;;;;x
+secretly_convert_to_church_of_erendira_holy_site_desc;The §YChurch of Eréndira§! pilgrims that flock to the holy site in §Y[Root.Location.GetName]§! impress me with the depth and passion of their faith. I am tempted to convert in secrecy...;;;;;;;;;;;;;x
+secret_religious_society_church_of_erendira_currency;Devotion;Dévotion;Hingabe;;Devoción;;;;;;;;;x
+secret_religious_society_church_of_erendira_rank_1_female;Faithful;Fidèle;Getreue;;Fiel;;;;x
+secret_religious_society_church_of_erendira_rank_2_female;Adherent;Adhérente;Anhängerin;;Seguidora;;;;x
+secret_religious_society_church_of_erendira_rank_3_female;Preacher;Prêcheuse;Predigerin;;Predicadora;;;;x
+secret_religious_society_church_of_erendira_rank_4_female;Herald;Messagère;Herold;;Mensajera;;;;x
+secret_religious_society_church_of_erendira_rank_1_male;Faithful;Fidèle;Getreuer;;Fiel;;;;x
+secret_religious_society_church_of_erendira_rank_2_male;Adherent;Adhérent;Anhänger;;Seguidor;;;;x
+secret_religious_society_church_of_erendira_rank_3_male;Preacher;Prêcheur;Prediger;;Predicador;;;;x
+secret_religious_society_church_of_erendira_rank_4_male;Herald;Messager;Herold;;Mensajero;;;;x
+secret_religious_community_church_of_erendira;Secret Church of Eréndira Community;;;;;;;;;;;;;x
+secret_church_of_erendira_community;Secret Church of Eréndira Community;;;;;;;;;;;;;x
+secret_church_of_erendira_community_desc;In secret, Church of Eréndira faithful have organized themselves as a community in this province. From there it converts others, grows, and protects their own.;;;;;;;;;;;;;x
+secret_religious_society_church_of_erendira_leader_desc;The High Priest, leading the international effort of bringing more people into the fold.;;;;;;;;;;;x
+
+warrior_of_sunlight;Warrior of Sunlight;;;;;;;;;;;;;x

@@ -1,0 +1,7 @@
+2630.1.1={
+	holder=1325118
+	law=enatic_cognatic_succession
+}
+2644.7.13={
+	holder=1810215
+}

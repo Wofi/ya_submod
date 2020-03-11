@@ -1,0 +1,5 @@
+2660.6.3={
+	holder=1325003
+	law=true_cognatic_succession
+	liege=d_michoacan
+}

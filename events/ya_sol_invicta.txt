@@ -1,0 +1,581 @@
+namespace = ya_sol_invicta
+
+character_event = { # Sol Invicta soft reform choice
+	id = ya_sol_invicta.1
+	# title = EVTNAME_solreorg
+	desc = EVTDESC_solreorg
+	picture = GFX_evt_cathedral
+	border = GFX_event_normal_frame_religion
+
+	is_triggered_only = yes
+	
+	trigger = {
+		NOT = { has_global_flag = solreorg }
+	}
+	
+	option = {
+		name = EVTOPTA_solreorg
+		ai_chance = {
+			factor = 9
+		}
+		hidden_tooltip = {
+			create_character = {
+				female = yes
+				age = 40
+				trait = mastermind_theologian
+				trait = zealous
+				trait = patient
+				trait = diligent
+				trait = kind
+				trait = brave
+				attributes = {
+					martial = 7
+					learning = 9
+					stewardship = 4
+					diplomacy = 5
+					intrigue = 3
+				}
+			}
+			new_character = {
+				grant_title = k_sol_invicta
+				grant_title = d_mexico
+				grant_title = c_mexico
+				grant_title = c_teoloyucan
+				grant_title = c_texcoco
+				grant_title = b_tacuba_MX
+				grant_title = b_tepexpan_MX
+				grant_title = b_huehuetoca_MX
+				piety = 500
+			}
+			k_mexico = {
+				set_preferred_capital = c_heroica_veracruz
+			}
+			e_mexico = {
+				set_preferred_capital = c_heroica_veracruz
+			}
+			k_sol_invicta = {
+				de_jure_liege = e_mexico
+				set_preferred_capital = c_mexico
+			}
+			d_mexico = { de_jure_liege = k_sol_invicta }
+			narrative_event = {
+				id = ya_sol_invicta.2
+				days = 14
+			}
+		}
+		custom_tooltip = { text = solreorg_priests }
+	}
+	option = {
+		name = EVTOPTB_solreorg
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 0
+				OR = {
+					trait = zealous
+					female = no
+				}
+			}
+			modifier = {
+				factor = 90
+				OR = {
+					trait = ambitious
+					trait = wroth
+					trait = proud
+					trait = cynical
+				}
+			}
+		}
+		grant_title = d_church_of_erendira
+		religion = church_of_erendira
+		capital_scope = {
+			limit = {
+				religion = sol_invicta
+			}
+			religion = church_of_erendira
+		}
+		any_vassal = {
+			limit = { primary_title = { NOT = { higher_tier_than = BARON } } }
+			religion = church_of_erendira
+		}
+		any_close_relative = {
+			religion = church_of_erendira
+		}
+		narrative_event = {
+			id = ya_sol_invicta.3
+			days = 14
+		}
+	}
+}
+
+narrative_event = { # Sol Invicta pope
+	id = ya_sol_invicta.2
+	title = EVTNAME_solpriests
+	desc = EVTDESC_solpriests
+	picture = GFX_evt_cathedral
+	border = GFX_event_narrative_frame_religion
+	
+	major = yes
+	is_triggered_only = yes
+	
+	option = {
+		name = EVTOPTA_solpriests
+		trigger = {
+			NOR = {
+				AND = {
+					religion = exovedate
+					NOT = {
+						has_global_flag = exopres
+					}
+				}
+				religion = espiritista
+				religion_group = pagan_group
+				religion_group = american_native
+				religion_group = mesoamerican_gods
+				religion_group = cult_of_saints
+				religion = gaian
+				religion = aphite
+				religion = atomicist
+			}
+		}
+	}
+	option = {
+		name = EVTOPTB_solref
+		trigger = {
+			religion = sol_invicta
+		}
+	}
+	option = {
+		name = EVTOPTC_solref
+		trigger = {
+			religion = sacred_heart
+		}
+	}
+	option = {
+		name = EVTOPTD_solref
+		trigger = {
+			OR = {
+				AND = {
+					religion = exovedate
+					NOT = {
+						has_global_flag = exopres
+					}
+				}
+				religion = espiritista
+				religion_group = pagan_group
+				religion_group = american_native
+			}
+		}
+	}
+	option = {
+		name = EVTOPTE_solref
+		trigger = {
+			OR = {
+				religion = falling_star
+				religion = gracia_divina
+				AND = {
+					NOT = { religion = sol_invicta }
+					religion_group = mesoamerican_gods
+				}
+				AND = {
+					OR = {
+						religion = aphite
+						religion = atomicist
+					}
+					OR = {
+						culture_group = mexicano
+						culture_group = chicano
+						culture_group = west_anglo
+						culture_group = southwestern
+						culture = plautdietsch
+					}
+				}
+			}
+		}
+	}
+	option = {
+		name = EVTOPTF_solref
+		trigger = {
+			OR = {
+				religion = aphite
+				religion = atomicist
+			}
+			NOR = {
+				culture_group = mexicano
+				culture_group = chicano
+				culture_group = west_anglo
+				culture_group = southwestern
+				culture = plautdietsch
+			}
+		}
+	}
+	option = {
+		name = EVTOPTG_solref
+		trigger = {
+			religion = gaian
+		}
+	}
+}
+
+narrative_event = { # Sol Invicta becomes Church of Erendira religious head
+	id = ya_sol_invicta.3
+	title = EVTNAME_soltemporal
+	desc = EVTDESC_soltemporal
+	picture = GFX_evt_cathedral
+	border = GFX_event_narrative_frame_religion
+	
+	major = yes
+	is_triggered_only = yes
+	
+	option = {
+		name = EVTOPTB_solref
+		trigger = {
+			religion = sol_invicta
+		}
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 10
+				OR = {
+					trait = cynical
+					trait = wroth
+					trait = ambitious
+				}
+			}
+			modifier = {
+				factor = 0
+				trait = zealous
+			}
+		}
+		religion = church_of_erendira
+		any_close_relative = {
+			religion = church_of_erendira
+		}
+		any_vassal = {
+			limit = { primary_title = { NOT = { higher_tier_than = BARON } } }
+			religion = church_of_erendira
+		}
+		capital_scope = {
+			limit = {
+				religion = sol_invicta
+			}
+			religion = church_of_erendira
+		}
+	}
+	
+	option = {
+		name = EVTOPTA_soltemporal
+		trigger = {
+			religion = sol_invicta
+		}
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 10
+				OR = {
+					trait = humble
+					trait = zealous
+					trait = content
+				}
+			}
+		}
+	}
+	
+	option = {
+		name = EVTOPTB_soltemporal
+		trigger = {
+			controls_religion = church_of_erendira
+		}
+	}
+	
+	option = {
+		name = EVTOPTB_solref
+		trigger = {
+			religion = church_of_erendira
+			NOT = {
+				controls_religion = church_of_erendira
+			}
+		}
+		set_name = "Eréndira"
+		give_nickname = nick_the_victorious
+	}
+	
+	option = {
+		name = EVTOPTA_solref
+		trigger = {
+			NOR = {
+				AND = {
+					religion = exovedate
+					NOT = {
+						has_global_flag = exopres
+					}
+				}
+				religion = espiritista
+				religion_group = pagan_group
+				religion_group = american_native
+				religion_group = mesoamerican_gods
+				religion_group = cult_of_saints
+				religion = gaian
+				religion = aphite
+				religion = atomicist
+				religion = church_of_erendira
+			}
+		}
+	}
+	option = {
+		name = EVTOPTC_solref
+		trigger = {
+			religion = sacred_heart
+		}
+	}
+	option = {
+		name = EVTOPTD_solref
+		trigger = {
+			OR = {
+				AND = {
+					religion = exovedate
+					NOT = {
+						has_global_flag = exopres
+					}
+				}
+				religion = espiritista
+				religion_group = pagan_group
+				religion_group = american_native
+			}
+		}
+	}
+	option = {
+		name = EVTOPTE_solref
+		trigger = {
+			OR = {
+				religion = falling_star
+				religion = gracia_divina
+				AND = {
+					NOT = { religion = sol_invicta }
+					NOT = { religion = church_of_erendira }
+					religion_group = mesoamerican_gods
+				}
+				AND = {
+					OR = {
+						religion = aphite
+						religion = atomicist
+					}
+					OR = {
+						culture_group = mexicano
+						culture_group = chicano
+						culture_group = west_anglo
+						culture_group = southwestern
+						culture = plautdietsch
+					}
+				}
+			}
+		}
+	}
+	option = {
+		name = EVTOPTF_solref
+		trigger = {
+			OR = {
+				religion = aphite
+				religion = atomicist
+			}
+			NOR = {
+				culture_group = mexicano
+				culture_group = chicano
+				culture_group = west_anglo
+				culture_group = southwestern
+				culture = plautdietsch
+			}
+		}
+	}
+	option = {
+		name = EVTOPTG_solref
+		trigger = {
+			religion = gaian
+		}
+	}
+}
+
+narrative_event = { # Church of Erendira religious head
+	id = ya_sol_invicta.4
+	title = EVTNAME_soltemporal
+	desc = EVTDESC_soltemporal
+	picture = GFX_evt_cathedral
+	border = GFX_event_narrative_frame_religion
+	
+	major = yes
+	is_triggered_only = yes
+	
+	option = {
+		name = EVTOPTA_soltemporal
+		trigger = {
+			religion = sol_invicta
+		}
+	}
+	
+	option = {
+		name = EVTOPTB_soltemporal
+		trigger = {
+			controls_religion = church_of_erendira
+		}
+		set_name = "Eréndira"
+		give_nickname = nick_the_victorious
+	}
+	
+	option = {
+		name = EVTOPTB_solref
+		trigger = {
+			religion = church_of_erendira
+			NOT = {
+				controls_religion = church_of_erendira
+			}
+		}
+	}
+	
+	option = {
+		name = EVTOPTA_solref
+		trigger = {
+			NOR = {
+				AND = {
+					religion = exovedate
+					NOT = {
+						has_global_flag = exopres
+					}
+				}
+				religion = espiritista
+				religion_group = pagan_group
+				religion_group = american_native
+				religion_group = mesoamerican_gods
+				religion_group = cult_of_saints
+				religion = gaian
+				religion = aphite
+				religion = atomicist
+				religion = church_of_erendira
+			}
+		}
+	}
+	option = {
+		name = EVTOPTC_solref
+		trigger = {
+			religion = sacred_heart
+		}
+	}
+	option = {
+		name = EVTOPTD_solref
+		trigger = {
+			OR = {
+				AND = {
+					religion = exovedate
+					NOT = {
+						has_global_flag = exopres
+					}
+				}
+				religion = espiritista
+				religion_group = pagan_group
+				religion_group = american_native
+			}
+		}
+	}
+	option = {
+		name = EVTOPTE_solref
+		trigger = {
+			OR = {
+				religion = falling_star
+				religion = gracia_divina
+				AND = {
+					NOT = { religion = sol_invicta }
+					NOT = { religion = church_of_erendira }
+					religion_group = mesoamerican_gods
+				}
+				AND = {
+					OR = {
+						religion = aphite
+						religion = atomicist
+					}
+					OR = {
+						culture_group = mexicano
+						culture_group = chicano
+						culture_group = west_anglo
+						culture_group = southwestern
+						culture = plautdietsch
+					}
+				}
+			}
+		}
+	}
+	option = {
+		name = EVTOPTF_solref
+		trigger = {
+			OR = {
+				religion = aphite
+				religion = atomicist
+			}
+			NOR = {
+				culture_group = mexicano
+				culture_group = chicano
+				culture_group = west_anglo
+				culture_group = southwestern
+				culture = plautdietsch
+			}
+		}
+	}
+	option = {
+		name = EVTOPTG_solref
+		trigger = {
+			religion = gaian
+		}
+	}
+}
+
+character_event = { # Arriving at crusade target
+	id = ya_sol_invicta.5
+	desc = "EVTDESC8300"
+	picture = "GFX_evt_battle"
+	border = GFX_event_normal_frame_war
+	
+	min_age = 16
+	capable_only = yes
+	prisoner = no
+	in_command = yes
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		religion = church_of_erendira
+		NOT = {
+			trait = warrior_of_sunlight
+		}
+		OR = {
+			AND = {
+				any_war = {
+					OR = {
+						using_cb = crusade
+						using_cb = new_crusade
+					}
+				}
+				crusade_target = {
+					is_located_in = ROOT
+				}
+			}
+			any_liege = {
+				religion = ROOT
+				any_war = {
+					OR = {
+						using_cb = crusade
+						using_cb = new_crusade
+					}
+				}
+				crusade_target = {
+					is_located_in = ROOT
+				}
+			}
+		}
+	}
+
+	immediate = {
+		abdicate_holy_order_if_religion_changes_effect = yes
+	}
+	
+	option = {
+		name = "8469.a"
+		add_trait = church_of_erendira
+	}
