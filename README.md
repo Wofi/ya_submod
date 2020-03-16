@@ -11,3 +11,4 @@ features
 planned features
 - more flavorful localisation for sol invicta
 - conclaval succession for sun priesthood
+- port zun events from vanilla?
