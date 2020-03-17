@@ -1,8 +1,11 @@
 k_sol_invicta;Sun Priesthood;;;;;;;;;x
-k_sol_invicta_adj;Sun Priest;;;;;;;;;x
+k_sol_invicta_adj;Solar;;;;;;;;;x
 SOL_FOA;Your Radiance;;;;;;;;;x
-HIGH_PRIEST;High Priest;;;;;;;;;x
-HIGH_PRIESTESS;High Priestess;;;;;;;;;x
+GRAND_HIEROPHANT;Grand Hierophant;;;;;;;;;x
+ASSEMBLY_OF_HIEROPHANTS;The Assembly of Hierophants;;;;;;;;;x
+title_sol_cardinal;Hierophant;;;;;;;;;x
+best_candidate_title_sol_cardinal;My Best Hierophant Candidate;;;;;;;;;x
+expected_next_title_sol_cardinal;Expected Next Hierophant;;;;;;;;;x
 
 church_of_erendira;Church of Eréndira;;;;;;;;;x
 d_church_of_erendira;Solar Priesthood;;;;;;;;;x

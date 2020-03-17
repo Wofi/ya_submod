@@ -4,8 +4,8 @@ k_sol_invicta = {
 	
 	capital = 1767 # Mexico City
 	
-	title = "HIGH_PRIEST"
-	title_female = "HIGH_PRIESTESS"
+	title = "GRAND_HIEROPHANT"
+	title_female = "GRAND_HIEROPHANT"
 	foa = "SOL_FOA"
 	
 	religion = sol_invicta

@@ -60,7 +60,7 @@ guiTypes = {
 				textureFile = ""
 				font = "vic_22_black"
 				borderSize = {x = 0 y = 0}
-				text = "HIGH_PRIESTESS"
+				text = "GRAND_HIEROPHANT"
 				maxWidth = 250
 				maxHeight = 24
 				fixedsize = yes
