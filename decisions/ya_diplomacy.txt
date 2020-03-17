@@ -25,7 +25,7 @@ targetted_decisions = {
 			prisoner = yes
 		}
 		effect = {
-			character_event = { id = CM.15000 days = 1 }
+			character_event = { id = ya_sol.10 days = 1 }
 		}
 		revoke_allowed = {
 			always = no
