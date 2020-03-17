@@ -574,7 +574,7 @@ character_event = { # Arriving at crusade target
 character_event = {
 	id = ya_sol.10
 	
-	desc = "EVTDESCCM15000"
+	desc = "EVTDESC_yasol10"
 	picture = GFX_evt_emissary
 	
 	is_triggered_only = yes
