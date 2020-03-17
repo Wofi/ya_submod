@@ -580,12 +580,7 @@ character_event = {
 	is_triggered_only = yes
 	
 	immediate = {
-		add_character_modifier = {
-			name = zun_judgement
-			duration = -1
-		}
-		
-		character_event = { id = ya_sol.11 days = 30 }
+		character_event = { id = ya_sol.11 days = 14 }
 	}
 	
 	option = {
@@ -605,88 +600,130 @@ character_event = {
 	immediate = {
 		if = {
 			limit = {
-				NOT = { trait = incapable }
-				NOT = { has_character_flag = erendira_judgment }
 				NOT = { trait = zealous }
-				NOT = { trait = cynical }
 				NOT = { religion = sol_invicta }
 				NOT = { religion = church_of_erendira }
 				NOT = { trait = lunatic }
 			}
-			
-			set_character_flag = erendira_judgment
 			random_list = {
-				60 = { character_event = { id = ya_sol.13 } } # Character lives
+				0 = { character_event = { id = ya_sol.13 } } # Character lives
+				20 = { character_event = { id = ya_sol.14 } } # Character dies
+				5 = { character_event = { id = ya_sol.15 } } # Character goes insane
+				5 = { character_event = { id = ya_sol.16 } } # Character goes zealous
+				5 = { character_event = { id = ya_sol.17 } } # Character goes zunist
+			}
+		}
+		else_if = {
+			limit = {
+				trait = zealous
+				NOT = { religion = sol_invicta }
+				NOT = { religion = church_of_erendira }
+				NOT = { trait = lunatic }
+			}
+			random_list = {
+				5 = { character_event = { id = ya_sol.13 } } # Character lives
+				15 = { character_event = { id = ya_sol.14 } } # Character dies
+				5 = { character_event = { id = ya_sol.15 } } # Character goes insane
+				0 = { character_event = { id = ya_sol.16 } } # Character goes zealous
+				5 = { character_event = { id = ya_sol.17 } } # Character goes zunist
+			}
+		}
+		else_if = {
+			limit = {
+				NOT = { trait = zealous }
+				OR = {
+					religion = sol_invicta
+					religion = church_of_erendira
+				}
+				NOT = { trait = lunatic }
+			}
+			random_list = {
+				5 = { character_event = { id = ya_sol.13 } } # Character lives
+				15 = { character_event = { id = ya_sol.14 } } # Character dies
+				5 = { character_event = { id = ya_sol.15 } } # Character goes insane
+				5 = { character_event = { id = ya_sol.16 } } # Character goes zealous
+				0 = { character_event = { id = ya_sol.17 } } # Character goes zunist
+			}
+		}
+		else_if = {
+			limit = {
+				trait = lunatic
+				NOT = { religion = sol_invicta }
+				NOT = { religion = church_of_erendira }
+				NOT = { trait = zealous }
+			}
+			random_list = {
+				5 = { character_event = { id = ya_sol.13 } } # Character lives
+				15 = { character_event = { id = ya_sol.14 } } # Character dies
+				0 = { character_event = { id = ya_sol.15 } } # Character goes insane
+				5 = { character_event = { id = ya_sol.16 } } # Character goes zealous
+				5 = { character_event = { id = ya_sol.17 } } # Character goes zunist
+			}
+		}
+		else_if = {
+			limit = {
+				trait = zealous
+				trait = lunatic
+				NOT = { religion = sol_invicta }
+				NOT = { religion = church_of_erendira }
+			}
+			random_list = {
+				10 = { character_event = { id = ya_sol.13 } } # Character lives
+				10 = { character_event = { id = ya_sol.14 } } # Character dies
+				0 = { character_event = { id = ya_sol.15 } } # Character goes insane
+				0 = { character_event = { id = ya_sol.16 } } # Character goes zealous
+				5 = { character_event = { id = ya_sol.17 } } # Character goes zunist
+			}
+		}
+		else_if = {
+			limit = {
+				trait = zealous
+				OR = {
+					religion = sol_invicta
+					religion = church_of_erendira
+				}
+				NOT = { trait = lunatic }
+			}
+			random_list = {
+				10 = { character_event = { id = ya_sol.13 } } # Character lives
 				10 = { character_event = { id = ya_sol.14 } } # Character dies
 				5 = { character_event = { id = ya_sol.15 } } # Character goes insane
-				5 = { character_event = { id = ya_sol.16 } } # Character goes zealous
-				5 = { character_event = { id = ya_sol.17 } } # Character goes zunist
-				10 = { character_event = { id = ya_sol.12 } }  # Character is freed
+				0 = { character_event = { id = ya_sol.16 } } # Character goes zealous
+				0 = { character_event = { id = ya_sol.17 } } # Character goes zunist
 			}
 		}
-		
-		if = {
+		else_if = {
 			limit = {
-				NOT = { trait = incapable }
-				NOT = { has_character_flag = erendira_judgment }
-				NOT = { trait = zealous }
-				NOT = { trait = cynical }
-				NOT = { religion = sol_invicta }
-				NOT = { religion = church_of_erendira }
 				trait = lunatic
+				OR = {
+					religion = sol_invicta
+					religion = church_of_erendira
+				}
+				NOT = { trait = zealous }
 			}
-			
-			set_character_flag = erendira_judgment
 			random_list = {
-				60 = { character_event = { id = ya_sol.13 } } # Character lives
-				5 = { character_event = { id = ya_sol.14 } } # Character dies
+				10 = { character_event = { id = ya_sol.13 } } # Character lives
+				10 = { character_event = { id = ya_sol.14 } } # Character dies
+				0 = { character_event = { id = ya_sol.15 } } # Character goes insane
 				5 = { character_event = { id = ya_sol.16 } } # Character goes zealous
-				5 = { character_event = { id = ya_sol.17 } } # Character goes zunist
-				20 = { character_event = { id = ya_sol.12 } }  # Character is freed
+				0 = { character_event = { id = ya_sol.17 } } # Character goes zunist
 			}
 		}
-		
-		if = {
+		else_if = {
 			limit = {
-				NOT = { trait = incapable }
-				NOT = { has_character_flag = erendira_judgment }
-				NOT = { trait = lunatic }
+				trait = lunatic
+				OR = {
+					religion = sol_invicta
+					religion = church_of_erendira
+				}
+				trait = zealous
 			}
-			
-			set_character_flag = erendira_judgment
 			random_list = {
-				60 = { character_event = { id = ya_sol.13 } } # Character lives
+				15 = { character_event = { id = ya_sol.13 } } # Character lives
 				5 = { character_event = { id = ya_sol.14 } } # Character dies
-				5 = { character_event = { id = ya_sol.15 } } # Character goes insane
-				20 = { character_event = { id = ya_sol.12 } }  # Character is freed
-			}
-		}
-		
-		if = {
-			limit = {
-				NOT = { trait = incapable }
-				NOT = { has_character_flag = erendira_judgment }
-			}
-			
-			set_character_flag = erendira_judgment
-			random_list = {
-				60 = { character_event = { id = ya_sol.13 } } # Character lives
-				5 = { character_event = { id = ya_sol.14 } } # Character dies
-				20 = { character_event = { id = ya_sol.12 } }  # Character is freed
-			}
-		}
-		
-		if = {
-			limit = {
-				trait = incapable
-				NOT = { has_character_flag = erendira_judgment }
-			}
-			
-			set_character_flag = erendira_judgment
-			random_list = {
-				60 = { character_event = { id = ya_sol.13 } } # Character lives
-				40 = { character_event = { id = ya_sol.14 } } # Character dies
-				10 = { character_event = { id = ya_sol.12 } }  # Character is freed
+				0 = { character_event = { id = ya_sol.15 } } # Character goes insane
+				0 = { character_event = { id = ya_sol.16 } } # Character goes zealous
+				0 = { character_event = { id = ya_sol.17 } } # Character goes zunist
 			}
 		}
 	}
@@ -701,16 +738,12 @@ character_event = {	# End torture
 	is_triggered_only = yes
 	
 	trigger = {
-		has_character_modifier = zun_judgement
 		prisoner = yes
 	}
 	
 	option = {
 		name = "EVTOPTACM15002"
-		remove_character_modifier = zun_judgement
-		clr_character_flag = erendira_judgment
-		prisoner = no
-		HOST = {
+		host = {
 			character_event = { id = ya_sol.19 }
 			remove_opinion = { who = ROOT modifier = opinion_traitor }
 			remove_opinion = { who = ROOT modifier = opinion_rebel_traitor }
@@ -733,6 +766,8 @@ character_event = {	# End torture
 			remove_opinion = { who = ROOT modifier = opinion_charge_slanderer } 
 			remove_opinion = { who = ROOT modifier = abuse_of_office } 
 		}
+		clr_character_flag = erendira_judgment
+		prisoner = no
 	}
 }
 
@@ -744,8 +779,7 @@ character_event = {	# Character lives
 	is_triggered_only = yes
 	
 	immediate = {
-		clr_character_flag = erendira_judgment
-		character_event = { id = ya_sol.11 days = 30 }
+		character_event = { id = ya_sol.12 days = 14 }
 	}
 }
 
@@ -759,8 +793,6 @@ character_event = {	# Character dies
 	
 	option = {
 		name = "EVTOPTACM15004"
-		remove_character_modifier = zun_judgement
-		clr_character_flag = erendira_judgment
 		host = {
 			ROOT = {
 				death = { 
@@ -784,9 +816,8 @@ character_event = {	# Character goes insane
 	
 	option = {
 		name = "EVTOPTACM15005"
-		clr_character_flag = erendira_judgment
 		add_trait = lunatic
-		character_event = { id = ya_sol.11 days = 30 }
+		character_event = { id = ya_sol.12 days = 14 }
 	}
 }
 
@@ -800,9 +831,8 @@ character_event = {	# Character goes zealous
 	
 	option = {
 		name = "EVTOPTACM15006"
-		clr_character_flag = erendira_judgment
 		add_trait = zealous
-		character_event = { id = ya_sol.11 days = 30 }
+		character_event = { id = ya_sol.12 days = 14 }
 	}
 }
 
@@ -816,9 +846,8 @@ character_event = {	# Character goes zunist
 	
 	option = {
 		name = "EVTOPTACM15007"
-		clr_character_flag = erendira_judgment
 		religion = sol_invicta
-		character_event = { id = ya_sol.11 days = 30 }
+		character_event = { id = ya_sol.12 days = 14 }
 	}
 }
 

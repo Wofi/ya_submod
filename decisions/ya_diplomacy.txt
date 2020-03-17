@@ -19,13 +19,14 @@ targetted_decisions = {
 		potential = {
 			host = { character = FROM }
 			prisoner = yes
-			NOT = { has_character_modifier = erendira_judgment }
+			NOT = { has_character_flag = erendira_judgment }
 		}
 		allow = {
 			prisoner = yes
 		}
 		effect = {
 			character_event = { id = ya_sol.10 days = 1 }
+			set_character_flag = erendira_judgment
 		}
 		revoke_allowed = {
 			always = no
