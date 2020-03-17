@@ -8,15 +8,17 @@ best_candidate_title_sol_cardinal;My Best Hierophant Candidate;;;;;;;;;x
 expected_next_title_sol_cardinal;Expected Next Hierophant;;;;;;;;;x
 
 church_of_erendira;Church of Eréndira;;;;;;;;;x
+church_of_erendira_DESC;These messianic followers of Eréndira believe that the forces of darkness have returned in force, and are waiting for an avatar of Eréndira to appear to lead them.;;;;;;;;;x
 d_church_of_erendira;Solar Priesthood;;;;;;;;;x
 d_church_of_erendira_adj;Solar;;;;;;;;;x
 LORD_RADIANT;Lord Radiant;;;;;;;;;x
 LADY_RADIANT;Lady Radiant;;;;;;;;;x
-church_of_erendira_desc;These messianic followers of Eréndira believe that the forces of darkness have returned in force, and are waiting for an avatar of Eréndira to appear to lead them.;;;;;;;;;x
 
 ya_reorg_sol;Reorganize the Jurihiata Ikikunari faith;;;;;;;;;x
 ya_reorg_sol_desc;The followers of Eréndira have traditionally relied on local hedge priests. Now that we have ousted the agents of darkness from [c_mexico.GetName], it may be in our best interest to found a more formal priesthood...;;;;;;;;;x
 EVTTOOLTIP_solreorg;Invite all Jurihiata Ikikunari priests to [c_mexico.GetName];;;;;;;;;x
+ya_sol_avatar;Proclaim yourself Avatar of Eréndira;;;;;;;;;x
+ya_sol_avatar_desc;w;;;;;;;;;x
 
 EVTNAME_solreorg;The Grand Council of [c_mexico.GetName];;;;;;;;;x
 EVTDESC_solreorg;Priests from all over Mexico are beginning to gather in [c_mexico.GetName]. Over the coming weeks, guided by the icon of Eréndira at the heart of the Great Temple, these holy women will decide the future of the faith. Of course, as the one who made this possible, I have a great deal of influence over the direction of the council...;;;;;;;;;x

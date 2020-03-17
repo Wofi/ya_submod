@@ -3,4 +3,8 @@ spriteTypes = {
 		name = "GFX_ya_reorg_sol"
 		texturefile = "gfx\\interface\\decision_icon_hold_zun_feast.dds"
 	}
+	spriteType = {
+		name = "GFX_ya_sol_avatar"
+		texturefile = "gfx\\interface\\decision_icon_hold_zun_feast.dds"
+	}
 }
