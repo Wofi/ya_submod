@@ -47,17 +47,6 @@ character_event = { # Sol Invicta soft reform choice
 				grant_title = b_huehuetoca_MX
 				piety = 500
 			}
-			k_mexico = {
-				set_preferred_capital = c_heroica_veracruz
-			}
-			e_mexico = {
-				set_preferred_capital = c_heroica_veracruz
-			}
-			k_sol_invicta = {
-				de_jure_liege = e_mexico
-				set_preferred_capital = c_mexico
-			}
-			d_mexico = { de_jure_liege = k_sol_invicta }
 			narrative_event = {
 				id = ya_sol_invicta.2
 				days = 14
