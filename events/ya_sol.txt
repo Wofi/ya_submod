@@ -1,7 +1,7 @@
-namespace = ya_sol_invicta
+namespace = ya_sol
 
 character_event = { # Sol Invicta soft reform choice
-	id = ya_sol_invicta.1
+	id = ya_sol.1
 	# title = EVTNAME_solreorg
 	desc = EVTDESC_solreorg
 	picture = GFX_evt_cathedral
@@ -98,7 +98,7 @@ character_event = { # Sol Invicta soft reform choice
 }
 
 narrative_event = { # Sol Invicta pope
-	id = ya_sol_invicta.2
+	id = ya_sol.2
 	title = EVTNAME_solpriests
 	desc = EVTDESC_solpriests
 	picture = GFX_evt_cathedral
@@ -207,7 +207,7 @@ narrative_event = { # Sol Invicta pope
 }
 
 narrative_event = { # Sol Invicta becomes Church of Erendira religious head
-	id = ya_sol_invicta.3
+	id = ya_sol.3
 	title = EVTNAME_soltemporal
 	desc = EVTDESC_soltemporal
 	picture = GFX_evt_cathedral
@@ -385,7 +385,7 @@ narrative_event = { # Sol Invicta becomes Church of Erendira religious head
 }
 
 narrative_event = { # Church of Erendira religious head
-	id = ya_sol_invicta.4
+	id = ya_sol.4
 	title = EVTNAME_soltemporal
 	desc = EVTDESC_soltemporal
 	picture = GFX_evt_cathedral
@@ -516,7 +516,7 @@ narrative_event = { # Church of Erendira religious head
 }
 
 character_event = { # Arriving at crusade target
-	id = ya_sol_invicta.5
+	id = ya_sol.5
 	desc = "EVTDESC8300"
 	picture = "GFX_evt_battle"
 	border = GFX_event_normal_frame_war
