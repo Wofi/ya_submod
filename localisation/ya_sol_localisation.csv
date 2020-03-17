@@ -39,6 +39,11 @@ EVTDESC_soltemporal;The Jurihiata Ikikunari sun-worshippers were once confined t
 EVTOPTA_soltemporal;This heathen [From.GetTitle] is making a mockery of our faith!;;;;;;;;;x
 EVTOPTB_soltemporal;With my guidance, we will destroy the darkness once and for all!;;;;;;;;;x
 
+EVTDESCCM15000;You've been thrown into a pit dug out in the middle of the desert. The guards explain to you that you are to be judged by the Radiant Lady, Eréndira. If you are guilty, the Sun will punish you for your crimes.;;;;;;;;;x
+
+EVTDESC_yasol18;Word reaches you that [From.GetBestName], who you ordered to be judged by Eréndira, has been found guilty.;;;;;;;;;;;;;x
+EVTDESC_yasol19;Word reaches you that [From.GetBestName], who you ordered to be judged by Eréndira, has been found innocent.;;;;;;;;;;;;;x
+
 secret_religious_society_church_of_erendira;[GetReligiousCommunityName_church_of_erendira];;;;;;;;;;;;;x
 secret_religious_society_REAL_church_of_erendira;Children of the Sun;;;;;;;;;;;;x
 alt_start_community_name_church_of_erendira;The [church_of_erendira.GetName] Faithful;;;;;;;;;;;;;x

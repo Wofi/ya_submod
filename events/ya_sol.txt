@@ -566,5 +566,280 @@ character_event = { # Arriving at crusade target
 	
 	option = {
 		name = "8469.a"
-		add_trait = church_of_erendira
+		add_trait = warrior_of_sunlight
 	}
+}
+
+# "Judged by Zun" events from vanilla	
+character_event = {
+	id = ya_sol.10
+	
+	desc = "EVTDESCCM15000"
+	picture = GFX_evt_emissary
+	
+	is_triggered_only = yes
+	
+	immediate = {
+		add_character_modifier = {
+			name = zun_judgement
+			duration = -1
+		}
+		
+		character_event = { id = ya_sol.11 days = 30 }
+	}
+	
+	option = {
+		name = "OK"
+	}
+}
+
+character_event = {
+	id = ya_sol.11
+	
+	hide_window = yes
+	#desc = "EVTDESCCM15001"
+	#picture = GFX_evt_emissary
+	
+	is_triggered_only = yes
+	
+	immediate = {
+		if = {
+			limit = {
+				NOT = { trait = incapable }
+				NOT = { has_character_flag = erendira_judgment }
+				NOT = { trait = zealous }
+				NOT = { trait = cynical }
+				NOT = { religion = sol_invicta }
+				NOT = { religion = church_of_erendira }
+				NOT = { trait = lunatic }
+			}
+			
+			set_character_flag = erendira_judgment
+			random_list = {
+				60 = { character_event = { id = ya_sol.13 } } # Character lives
+				10 = { character_event = { id = ya_sol.14 } } # Character dies
+				5 = { character_event = { id = ya_sol.15 } } # Character goes insane
+				5 = { character_event = { id = ya_sol.16 } } # Character goes zealous
+				5 = { character_event = { id = ya_sol.17 } } # Character goes zunist
+				10 = { character_event = { id = ya_sol.12 } }  # Character is freed
+			}
+		}
+		
+		if = {
+			limit = {
+				NOT = { trait = incapable }
+				NOT = { has_character_flag = erendira_judgment }
+				NOT = { trait = zealous }
+				NOT = { trait = cynical }
+				NOT = { religion = sol_invicta }
+				NOT = { religion = church_of_erendira }
+				trait = lunatic
+			}
+			
+			set_character_flag = erendira_judgment
+			random_list = {
+				60 = { character_event = { id = ya_sol.13 } } # Character lives
+				5 = { character_event = { id = ya_sol.14 } } # Character dies
+				5 = { character_event = { id = ya_sol.16 } } # Character goes zealous
+				5 = { character_event = { id = ya_sol.17 } } # Character goes zunist
+				20 = { character_event = { id = ya_sol.12 } }  # Character is freed
+			}
+		}
+		
+		if = {
+			limit = {
+				NOT = { trait = incapable }
+				NOT = { has_character_flag = erendira_judgment }
+				NOT = { trait = lunatic }
+			}
+			
+			set_character_flag = erendira_judgment
+			random_list = {
+				60 = { character_event = { id = ya_sol.13 } } # Character lives
+				5 = { character_event = { id = ya_sol.14 } } # Character dies
+				5 = { character_event = { id = ya_sol.15 } } # Character goes insane
+				20 = { character_event = { id = ya_sol.12 } }  # Character is freed
+			}
+		}
+		
+		if = {
+			limit = {
+				NOT = { trait = incapable }
+				NOT = { has_character_flag = erendira_judgment }
+			}
+			
+			set_character_flag = erendira_judgment
+			random_list = {
+				60 = { character_event = { id = ya_sol.13 } } # Character lives
+				5 = { character_event = { id = ya_sol.14 } } # Character dies
+				20 = { character_event = { id = ya_sol.12 } }  # Character is freed
+			}
+		}
+		
+		if = {
+			limit = {
+				trait = incapable
+				NOT = { has_character_flag = erendira_judgment }
+			}
+			
+			set_character_flag = erendira_judgment
+			random_list = {
+				60 = { character_event = { id = ya_sol.13 } } # Character lives
+				40 = { character_event = { id = ya_sol.14 } } # Character dies
+				10 = { character_event = { id = ya_sol.12 } }  # Character is freed
+			}
+		}
+	}
+}
+
+character_event = {	# End torture
+	id = ya_sol.12
+	
+	desc = "EVTDESCCM15002"
+	picture = GFX_evt_emissary
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		has_character_modifier = zun_judgement
+		prisoner = yes
+	}
+	
+	option = {
+		name = "EVTOPTACM15002"
+		remove_character_modifier = zun_judgement
+		clr_character_flag = erendira_judgment
+		prisoner = no
+		HOST = {
+			character_event = { id = ya_sol.19 }
+			remove_opinion = { who = ROOT modifier = opinion_traitor }
+			remove_opinion = { who = ROOT modifier = opinion_rebel_traitor }
+			remove_opinion = { who = ROOT modifier = opinion_dishonorable }
+			remove_opinion = { who = ROOT modifier = declared_war }  
+			remove_opinion = { who = ROOT modifier = opinion_regicide_traitor } 
+			remove_opinion = { who = ROOT modifier = opinion_killed_close_kin } 
+			remove_opinion = { who = ROOT modifier = opinion_refused_abdicate_title } 
+			remove_opinion = { who = ROOT modifier = opinion_fatwa_target } 
+			remove_opinion = { who = ROOT modifier = opinion_refused_order } 
+			remove_opinion = { who = ROOT modifier = opinion_witch } 
+			remove_opinion = { who = ROOT modifier = opinion_takfir } 
+			remove_opinion = { who = ROOT modifier = opinion_unfaithful_wife } 
+			remove_opinion = { who = ROOT modifier = opinion_cuckolded } 
+			remove_opinion = { who = ROOT modifier = opinion_charge_heresiarch } 
+			remove_opinion = { who = ROOT modifier = opinion_charge_infidel } 
+			remove_opinion = { who = ROOT modifier = opinion_charge_deviant } 
+			remove_opinion = { who = ROOT modifier = opinion_charge_illegitimate } 
+			remove_opinion = { who = ROOT modifier = opinion_charge_traitor } 
+			remove_opinion = { who = ROOT modifier = opinion_charge_slanderer } 
+			remove_opinion = { who = ROOT modifier = abuse_of_office } 
+		}
+	}
+}
+
+character_event = {	# Character lives
+	id = ya_sol.13
+	
+	hide_window = yes
+	
+	is_triggered_only = yes
+	
+	immediate = {
+		clr_character_flag = erendira_judgment
+		character_event = { id = ya_sol.11 days = 30 }
+	}
+}
+
+character_event = {	# Character dies
+	id = ya_sol.14
+	
+	desc = "EVTDESCCM15004"
+	picture = GFX_evt_emissary
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "EVTOPTACM15004"
+		remove_character_modifier = zun_judgement
+		clr_character_flag = erendira_judgment
+		host = {
+			ROOT = {
+				death = { 
+					killer = PREV
+					death_reason = death_sacrificed
+				}
+			}
+			character_event = { id = ya_sol.18 }
+		}
+
+	}
+}
+
+character_event = {	# Character goes insane
+	id = ya_sol.15
+	
+	desc = "EVTDESCCM15005"
+	picture = GFX_evt_emissary
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "EVTOPTACM15005"
+		clr_character_flag = erendira_judgment
+		add_trait = lunatic
+		character_event = { id = ya_sol.11 days = 30 }
+	}
+}
+
+character_event = {	# Character goes zealous
+	id = ya_sol.16
+	
+	desc = "EVTDESCCM15006"
+	picture = GFX_evt_emissary
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "EVTOPTACM15006"
+		clr_character_flag = erendira_judgment
+		add_trait = zealous
+		character_event = { id = ya_sol.11 days = 30 }
+	}
+}
+
+character_event = {	# Character goes zunist
+	id = ya_sol.17
+	
+	desc = "EVTDESCCM15007"
+	picture = GFX_evt_emissary
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "EVTOPTACM15007"
+		clr_character_flag = erendira_judgment
+		religion = sol_invicta
+		character_event = { id = ya_sol.11 days = 30 }
+	}
+}
+
+character_event = { # prisoner died notification
+	id = ya_sol.18
+	desc = "EVTDESC_yasol18"
+	picture = GFX_evt_emissary
+	is_triggered_only = yes
+	
+	option = {
+		name = OK
+	}
+}
+
+character_event = { # prisoner lived notification
+	id = ya_sol.19
+	desc = "EVTDESC_yasol19"
+	picture = GFX_evt_emissary
+	is_triggered_only = yes
+	
+	option = {
+		name = OK
+	}
+}
