@@ -241,7 +241,7 @@
 	trait=greedy
 	give_nickname=nick_the_bold
 	2627.5.8={birth=yes}
-	2648.1.31={add_spouse=1810241}
+	2648.1.31={add_matrilineal_spouse=1810241}
 	2701.7.13={death=yes}
 }
 
@@ -255,7 +255,7 @@
 	trait=zealous
 	trait=greedy
 	2628.5.8={birth=yes}
-	2648.1.31={add_spouse=1810240}
+	2648.1.31={add_matrilineal_spouse=1810240}
 	2701.7.13={death=yes}
 }
 
@@ -277,4 +277,23 @@
 	religion=sol_invicta
 	2631.5.8={birth=yes}
 	2701.7.13={death=yes}
+}
+
+4000000 = {
+	name = "Tsuya"
+	female = yes
+	dynasty = 4000000
+	culture = rostmann
+	religion = hamiltonian
+	trait = fortune_builder
+	trait = shrewd
+	trait = schemer
+	trait = lefthanded
+	trait = ambitious
+	trait = patient
+	trait = craven
+	trait = deceitful
+	trait = cynical
+	2645.3.16 = {birth=yes}
+	2700.7.13 = {death=yes}
 }
