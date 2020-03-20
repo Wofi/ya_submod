@@ -18,7 +18,7 @@ ya_reorg_sol;Reorganize the Jurihiata Ikikunari faith;;;;;;;;;x
 ya_reorg_sol_desc;The followers of Eréndira have traditionally relied on local hedge priests. Now that we have ousted the agents of darkness from [c_mexico.GetName], it may be in our best interest to found a more formal priesthood...;;;;;;;;;x
 EVTTOOLTIP_solreorg;Invite all Jurihiata Ikikunari priests to [c_mexico.GetName];;;;;;;;;x
 ya_sol_avatar;Proclaim yourself Avatar of Eréndira;;;;;;;;;x
-ya_sol_avatar_desc;w;;;;;;;;;x
+ya_sol_avatar_desc;Anyone can declare themselves a living god. However, with the conquest of [c_mexico.GetName], I have enough authority that my subjects might take me seriously...;;;;;;;;;x
 
 EVTNAME_solreorg;The Grand Council of [c_mexico.GetName];;;;;;;;;x
 EVTDESC_solreorg;Priests from all over Mexico are beginning to gather in [c_mexico.GetName]. Over the coming weeks, guided by the icon of Eréndira at the heart of the Great Temple, these holy women will decide the future of the faith. Of course, as the one who made this possible, I have a great deal of influence over the direction of the council...;;;;;;;;;x
