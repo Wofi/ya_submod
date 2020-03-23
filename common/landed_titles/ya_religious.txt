@@ -44,3 +44,10 @@ d_church_of_erendira = {
 		always = no
 	}
 }
+
+d_sol_invicta = {
+	allow = {
+		always = no
+	}
+	controls_religion = no
+}
