@@ -75,21 +75,24 @@ character_event = { # Sol Invicta soft reform choice
 				}
 			}
 		}
-		grant_title = d_church_of_erendira
-		religion = church_of_erendira
-		capital_scope = {
-			limit = {
-				religion = sol_invicta
+		hidden_tooltip = {
+			grant_title = d_church_of_erendira
+			religion = church_of_erendira
+			capital_scope = {
+				limit = {
+					religion = sol_invicta
+				}
+				religion = church_of_erendira
 			}
-			religion = church_of_erendira
+			any_vassal = {
+				limit = { primary_title = { NOT = { higher_tier_than = BARON } } }
+				religion = church_of_erendira
+			}
+			any_close_relative = {
+				religion = church_of_erendira
+			}
 		}
-		any_vassal = {
-			limit = { primary_title = { NOT = { higher_tier_than = BARON } } }
-			religion = church_of_erendira
-		}
-		any_close_relative = {
-			religion = church_of_erendira
-		}
+		custom_tooltip = { text = solreorg_temporal }
 		narrative_event = {
 			id = ya_sol.3
 			days = 14
