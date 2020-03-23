@@ -7,6 +7,7 @@ decisions = {
 		potential = {
 			religion = sol_invicta
 			k_sol_invicta = { has_holder = no }
+			d_church_of_erendira = { has_holder = no }
 			NOT = {
 				has_alternate_start_parameter = { key = religion_names value = random }
 			}
@@ -34,7 +35,7 @@ decisions = {
 		effect = {
 			piety = -250
 			character_event = {
-				id = ya_sol_invicta.1
+				id = ya_sol.1
 				tooltip = EVTTOOLTIP_solreorg
 			}
 		}
@@ -51,6 +52,7 @@ decisions = {
 		potential = {
 			religion = church_of_erendira
 			k_sol_invicta = { has_holder = no }
+			d_church_of_erendira = { has_holder = no }
 			NOT = {
 				has_alternate_start_parameter = { key = religion_names value = random }
 			}
@@ -79,7 +81,7 @@ decisions = {
 			piety = -250
 			grant_title = d_church_of_erendira
 			character_event = {
-				id = ya_sol_invicta.4
+				id = ya_sol.4
 			}
 		}
 		ai_will_do = {

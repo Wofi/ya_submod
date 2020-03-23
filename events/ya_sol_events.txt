@@ -48,7 +48,7 @@ character_event = { # Sol Invicta soft reform choice
 				piety = 500
 			}
 			narrative_event = {
-				id = ya_sol_invicta.2
+				id = ya_sol.2
 				days = 14
 			}
 		}
@@ -91,7 +91,7 @@ character_event = { # Sol Invicta soft reform choice
 			religion = church_of_erendira
 		}
 		narrative_event = {
-			id = ya_sol_invicta.3
+			id = ya_sol.3
 			days = 14
 		}
 	}
