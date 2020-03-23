@@ -1,0 +1,63 @@
+# k_mexico is basically the center of the faith
+d_mexico = {
+	church_of_erendira = 50000
+}
+k_mexico = {
+	church_of_erendira = 10000
+}
+# kingdoms in e_mexico with holy sites
+k_michoacan = {
+	church_of_erendira = 5000
+}
+k_bajio = {
+	church_of_erendira = 5000
+}
+k_gran_chichimeca = {
+	church_of_erendira = 5000
+}
+e_mexico = {
+	church_of_erendira = 5000
+}
+# kingdoms in e_mexico without holy sites
+k_mixteca = {
+	church_of_erendira = 2500
+}
+k_zapoteca = {
+	church_of_erendira = 2500
+}
+k_jalisco = {
+	church_of_erendira = 2500
+}
+k_colima = {
+	church_of_erendira = 2500
+}
+# k_sierra_madre has a holy site so it gets bumped up a slot
+k_sierra_madre = {
+	church_of_erendira = 2500
+}
+# kingdoms outside e_mexico
+k_rio_bravo = {
+	church_of_erendira = 1000
+}
+k_sinaloa = {
+	church_of_erendira = 1000
+}
+k_sonora = {
+	church_of_erendira = 1000
+}
+k_chiapas = {
+	church_of_erendira = 1000
+}
+k_peten = {
+	church_of_erendira = 1000
+}
+k_guatemala = {
+	church_of_erendira = 1000
+}
+k_yucatan = {
+	church_of_erendira = 1000
+}
+# WHY IS THE LADY RADIANT DECLARING A CRUSADE FOR NEWFOUNDLAND???
+k_newfoundland = {
+	church_of_erendira = 1
+}
