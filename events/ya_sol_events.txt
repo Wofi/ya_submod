@@ -276,7 +276,15 @@ narrative_event = { # Sol Invicta becomes Church of Erendira religious head
 	option = {
 		name = EVTOPTB_soltemporal
 		trigger = {
-			controls_religion = church_of_erendira
+			AND = {
+				religion = church_of_erendira
+				controls_religion = yes
+			}
+		}
+		set_name = "Eréndira"
+		give_nickname = nick_the_victorious
+		create_bloodline = {
+			type = ya_erendira
 		}
 	}
 	
@@ -285,13 +293,8 @@ narrative_event = { # Sol Invicta becomes Church of Erendira religious head
 		trigger = {
 			religion = church_of_erendira
 			NOT = {
-				controls_religion = church_of_erendira
+				controls_religion = yes
 			}
-		}
-		set_name = "Eréndira"
-		give_nickname = nick_the_victorious
-		create_bloodline = {
-			type = ya_erendira
 		}
 	}
 	
@@ -410,7 +413,10 @@ narrative_event = { # Church of Erendira religious head
 	option = {
 		name = EVTOPTB_soltemporal
 		trigger = {
-			controls_religion = church_of_erendira
+			AND = {
+				religion = church_of_erendira
+				controls_religion = yes
+			}
 		}
 		set_name = "Eréndira"
 		give_nickname = nick_the_victorious
@@ -424,7 +430,7 @@ narrative_event = { # Church of Erendira religious head
 		trigger = {
 			religion = church_of_erendira
 			NOT = {
-				controls_religion = church_of_erendira
+				controls_religion = yes
 			}
 		}
 	}
@@ -448,6 +454,7 @@ narrative_event = { # Church of Erendira religious head
 				religion = aphite
 				religion = atomicist
 				religion = church_of_erendira
+				religion = sol_invicta
 			}
 		}
 	}
