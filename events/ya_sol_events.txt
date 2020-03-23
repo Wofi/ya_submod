@@ -287,6 +287,9 @@ narrative_event = { # Sol Invicta becomes Church of Erendira religious head
 		}
 		set_name = "Eréndira"
 		give_nickname = nick_the_victorious
+		create_bloodline = {
+			type = ya_erendira
+		}
 	}
 	
 	option = {
@@ -408,6 +411,9 @@ narrative_event = { # Church of Erendira religious head
 		}
 		set_name = "Eréndira"
 		give_nickname = nick_the_victorious
+		create_bloodline = {
+			type = ya_erendira
+		}
 	}
 	
 	option = {

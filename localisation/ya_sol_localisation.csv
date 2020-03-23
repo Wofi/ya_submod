@@ -14,6 +14,9 @@ d_church_of_erendira_adj;Solar;;;;;;;;;x
 LORD_RADIANT;Lord Radiant;;;;;;;;;x
 LADY_RADIANT;Lady Radiant;;;;;;;;;x
 
+ya_erendira;Divine Blood of Eréndira;;;;;;;;;x
+ya_erendira_desc;[TODO];;;;;;;;;x
+
 ya_reorg_sol;Reorganize the Jurihiata Ikikunari faith;;;;;;;;;x
 ya_reorg_sol_desc;The followers of Eréndira have traditionally relied on local hedge priests. Now that we have ousted the agents of darkness from [c_mexico.GetName], it may be in our best interest to found a more formal priesthood...;;;;;;;;;x
 EVTTOOLTIP_solreorg;Invite all Jurihiata Ikikunari priests to [c_mexico.GetName];;;;;;;;;x

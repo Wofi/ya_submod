@@ -1,0 +1,21 @@
+ya_erendira = {
+	mesoamerican_gods_opinion = 5
+	monthly_character_piety = 0.3
+	command_modifier = {
+		religious_enemy = 0.3
+	}
+	saintly_inquisitional_bloodline = 1
+	allow_bastards = no
+	inheritance = matrilineal
+	flags = { created_bloodline inquisitional_saintly_bloodline }
+	active = {
+		custom_tooltip = {
+			text = saintly_bloodline_same_religion_TT
+			FROM = {
+				founder = {
+					religion = ROOT
+				}
+			}
+		}
+	}
+}
