@@ -91,6 +91,9 @@ character_event = { # Sol Invicta soft reform choice
 			any_close_relative = {
 				religion = church_of_erendira
 			}
+			primary_title = { gender_succ = enatic }
+			sol_invicta = { religion_authority = { modifier = sol_schism } }
+			church_of_erendira = { religion_authority = { modifier = sol_schism } }
 		}
 		custom_tooltip = { text = solreorg_temporal }
 		narrative_event = {
@@ -253,6 +256,7 @@ narrative_event = { # Sol Invicta becomes Church of Erendira religious head
 			}
 			religion = church_of_erendira
 		}
+		primary_title = { gender_succ = enatic }
 	}
 	
 	option = {

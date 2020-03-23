@@ -83,6 +83,7 @@ decisions = {
 			character_event = {
 				id = ya_sol.4
 			}
+			sol_invicta = { religion_authority = { modifier = sol_schism } }
 		}
 		ai_will_do = {
 			factor = 1
