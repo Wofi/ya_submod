@@ -1779,6 +1779,9 @@ pacific = {
 		intermarry = shinto
 		intermarry = nousthreskeia
 		intermarry = neognostic
+		
+		intermarry = church_of_erendira
+		intermarry = sol_invicta
 	}
 	
 	shinto = {
@@ -2129,6 +2132,11 @@ mesoamerican_gods = {
 		
 		intermarry = sacred_heart
 		intermarry = falling_star
+		
+		intermarry = gaian
+		intermarry = misrist
+		intermarry = aria_de_machete
+		intermarry = aria_de_machete_reformed
 	}
 	
 	church_of_erendira = {
@@ -2179,6 +2187,11 @@ mesoamerican_gods = {
 		religious_clothing_priest = 13
 		
 		intermarry = sol_invicta
+		
+		intermarry = gaian
+		intermarry = misrist
+		intermarry = aria_de_machete
+		intermarry = aria_de_machete_reformed
 	}
 	
 	mictlantec = {
@@ -3525,6 +3538,9 @@ pagan_group = {
 		allow_in_ruler_designer = no
 		
 		intermarry = espiritista
+		
+		intermarry = church_of_erendira
+		intermarry = sol_invicta
 	}	
 	
 	aria_de_machete = {
@@ -3577,6 +3593,10 @@ pagan_group = {
 		dislike_tribal_organization = yes
 		
 		intermarry = espiritista
+		
+		intermarry = church_of_erendira
+		intermarry = sol_invicta
+		
 		can_demand_religious_conversion = no
 	}
 }
@@ -4217,9 +4237,10 @@ muslim = {
 		peace_piety_gain = 1.0 #Gains 1 extra piety per month while at peace
 		rel_head_defense = yes
 
-
 		intermarry = orientalist
 
+		intermarry = church_of_erendira
+		intermarry = sol_invicta
 
 		religious_clothing_head = 5
 		religious_clothing_priest = 5
