@@ -123,12 +123,13 @@ narrative_event = { # Sol Invicta pope
 						has_global_flag = exopres
 					}
 				}
-				religion = espiritista
 				religion_group = pagan_group
 				religion_group = american_native
 				religion_group = mesoamerican_gods
 				religion_group = cult_of_saints
 				religion = gaian
+				trait = machete_female
+				trait = machete_female_ref
 				religion = aphite
 				religion = atomicist
 			}
@@ -156,7 +157,6 @@ narrative_event = { # Sol Invicta pope
 						has_global_flag = exopres
 					}
 				}
-				religion = espiritista
 				religion_group = pagan_group
 				religion_group = american_native
 			}
@@ -167,7 +167,7 @@ narrative_event = { # Sol Invicta pope
 		trigger = {
 			OR = {
 				religion = falling_star
-				religion = gracia_divina
+				religion = patria_grande
 				AND = {
 					NOT = { religion = sol_invicta }
 					religion_group = mesoamerican_gods
@@ -208,6 +208,8 @@ narrative_event = { # Sol Invicta pope
 		name = EVTOPTG_solref
 		trigger = {
 			religion = gaian
+			trait = machete_female
+			trait = machete_female_ref
 		}
 	}
 }
@@ -312,12 +314,13 @@ narrative_event = { # Sol Invicta becomes Church of Erendira religious head
 						has_global_flag = exopres
 					}
 				}
-				religion = espiritista
 				religion_group = pagan_group
 				religion_group = american_native
 				religion_group = mesoamerican_gods
 				religion_group = cult_of_saints
 				religion = gaian
+				trait = machete_female
+				trait = machete_female_ref
 				religion = aphite
 				religion = atomicist
 				religion = church_of_erendira
@@ -340,7 +343,6 @@ narrative_event = { # Sol Invicta becomes Church of Erendira religious head
 						has_global_flag = exopres
 					}
 				}
-				religion = espiritista
 				religion_group = pagan_group
 				religion_group = american_native
 			}
@@ -351,7 +353,7 @@ narrative_event = { # Sol Invicta becomes Church of Erendira religious head
 		trigger = {
 			OR = {
 				religion = falling_star
-				religion = gracia_divina
+				religion = patria_grande
 				AND = {
 					NOT = { religion = sol_invicta }
 					NOT = { religion = church_of_erendira }
@@ -374,13 +376,13 @@ narrative_event = { # Sol Invicta becomes Church of Erendira religious head
 		}
 	}
 	option = {
-		name = EVTOPTF_solref
+		name = EVTOPTF_solref # may no longer be necessary
 		trigger = {
 			OR = {
 				religion = aphite
 				religion = atomicist
 			}
-			NOR = {
+			NOR = { 
 				culture_group = mexicano
 				culture_group = chicano
 				culture_group = west_anglo
@@ -393,6 +395,8 @@ narrative_event = { # Sol Invicta becomes Church of Erendira religious head
 		name = EVTOPTG_solref
 		trigger = {
 			religion = gaian
+			trait = machete_female
+			trait = machete_female_ref
 		}
 	}
 }
