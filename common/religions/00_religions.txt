@@ -2066,7 +2066,7 @@ mesoamerican_gods = {
 
 		secondary_event_pictures = mesoamerican
 		icon = 35
-		heresy_icon = 84
+		heresy_icon = 87
 		
 		color = { 0.9 0.6 0.0 }
 		
@@ -2137,7 +2137,7 @@ mesoamerican_gods = {
 	
 		secondary_event_pictures = mesoamerican
 		icon = 35
-		heresy_icon = 84
+		heresy_icon = 87
 		
 		ai_convert_same_group = 2
 		
