@@ -282,6 +282,7 @@
 4000000 = {
 	name = "Clara"
 	female = yes
+	dna="dcbagvfckdo"
 	dynasty = 4000000
 	culture = rostmann
 	religion = hamiltonian
@@ -301,6 +302,7 @@
 
 4000001 = {
 	name = "Wilfred"
+	dna="daabdlicidb"
 	dynasty = 4000001
 	culture = mountainer
 	religion = neogodbeite
