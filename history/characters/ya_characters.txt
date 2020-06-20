@@ -280,7 +280,7 @@
 }
 
 4000000 = {
-	name = "Tsuya"
+	name = "Clara"
 	female = yes
 	dynasty = 4000000
 	culture = rostmann
@@ -295,5 +295,28 @@
 	trait = deceitful
 	trait = cynical
 	2645.3.16 = {birth=yes}
+	2666.7.3 = {employer=1821003}
+	2700.7.13 = {death=yes}
+}
+
+4000001 = {
+	name = "Wilfred"
+	dynasty = 4000001
+	culture = mountainer
+	religion = neogodbeite
+	trait = skilled_tactician
+	trait = siege_leader
+	trait = pilgrim
+	trait = duelist
+	trait = bastard
+	trait = just
+	trait = content
+	trait = humble
+	trait = patient
+	2641.5.11 = {birth=yes}
+	2666.7.3 = { 
+		give_nickname=nick_the_unlucky
+		employer=1890020
+	}
 	2700.7.13 = {death=yes}
 }
