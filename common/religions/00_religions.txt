@@ -458,7 +458,7 @@ amero_syncretic = {
 		intermarry = exovedate
 	}
 	orthodox = {
-		graphical_culture = mesoamericangfx
+		graphical_culture = westerngfx
 		
 		icon = 21
 		heresy_icon = 21
@@ -1622,7 +1622,6 @@ cult_of_saints= {
 		allow_rivermovement = yes
 		autocephaly = yes # may have issues with localization...
 		can_excommunicate = yes
-
 		
 		religious_clothing_head = 0
 		religious_clothing_priest = 1
@@ -1631,7 +1630,6 @@ cult_of_saints= {
 		scripture_name = THE_BIBLE
 		priest_title = PADRE
 
-		
 		intermarry = patria_grande
 		
 		intermarry = apostolic
@@ -1667,6 +1665,7 @@ cult_of_saints= {
 		allow_rivermovement = yes
 		has_heir_designation = yes
 		can_call_crusade = yes
+		join_crusade_if_bordering_hostile = yes
 		
 		religious_clothing_head = 0
 		religious_clothing_priest = 1
@@ -1765,6 +1764,9 @@ pacific = {
 		}
 		
 		feminist = yes
+		men_can_take_consorts = no
+		women_can_take_consorts = yes
+		max_consorts = 3
 		crusade_name = GREAT_HOLY_WAR
 		scripture_name = THE_BOOK_OF_SHADOWS
 		priest_title = DRUID
@@ -1838,7 +1840,7 @@ pacific = {
 		high_god_name = GOD_THE_NOOSPHERE
 		
 		god_names = {
-			GOD_THE_WISH_GRANTER GOD_THE_GOLDEN_SPHERE
+			GOD_MONOLITH GOD_THE_WISH_GRANTER GOD_THE_GOLDEN_SPHERE
 		}
 		
 		evil_god_names = {
@@ -2062,7 +2064,7 @@ mesoamerican_gods = {
 		Qchi Qco Qcuaa Qcuane Qcuau Qcuii Qcusi Qhua Qhuaco Qhuidzu Qhuiyo Qmahu Qmau Qnuu Qqhi Qque Qquevui Qsa Qsayu Qtuta Quchi Quco Qucuaa Qucuane Qucuau Qucuii Qucusi Quhua Quhuaco Quhuidzu Quhuiyo Quichi Quico Quicuaa Quicuane Quicuau Quicuii Quicusi Quihua Quihuaco Quihuidzu Quihuiyo Quimahu Quimau Quinuu Quiqhi Quique Quiquevui Quisa Quisayu Quituta Quiyo Qumahu Qumau Qunuu Quqhi Quque Ququevui Qusa Qusayu Qututa Quyo Qyo 
 		Sachi Saco Sacuaa Sacuane Sacuau Sacuii Sacusi Sahua Sahuaco Sahuidzu Sahuiyo Samahu Samau Sanuu Saqhi Saque Saquevui Sasa Sasayu Satuta Sayo Sichi Sico Sicuaa Sicuane Sicuau Sicuii Sicusi Sihua Sihuaco Sihuidzu Sihuiyo Siichi Siico Siicuaa Siicuane Siicuau Siicuii Siicusi Siihua Siihuaco Siihuidzu Siihuiyo Siimahu Siimau Siinuu Siiqhi Siique Siiquevui Siisa Siisayu Siituta Siiyo Simahu Simau Sinuu Siqhi Sique Siquevui Sisa Sisayu Situta Siyo
 	}
-	
+
 	sol_invicta = { # Now called Jurihiata Ikikunari
 		graphical_culture = mesoamericangfx
 
@@ -2122,10 +2124,9 @@ mesoamerican_gods = {
 		feminist = yes
 		attacking_same_religion_piety_loss = yes
 
-		# todo: change these
 		crusade_name = GREAT_HOLY_WAR
 		scripture_name = THE_LEGENDS
-		priest_title = PRIESTS
+		priest_title = PRIEST
 		
 		religious_clothing_head = 13
 		religious_clothing_priest = 13
@@ -2135,7 +2136,7 @@ mesoamerican_gods = {
 		intermarry = qabantajik
 		intermarry = church_of_erendira
 	}
-	
+
 	church_of_erendira = {
 		graphical_culture = mesoamericangfx
 		parent = sol_invicta
@@ -2175,7 +2176,6 @@ mesoamerican_gods = {
 		raised_vassal_opinion_loss = no
 		aggression = 2.0
 		
-		# todo: change these
 		crusade_name = GREAT_HOLY_WAR
 		scripture_name = THE_LEGENDS
 		priest_title = PRIEST
@@ -2330,7 +2330,7 @@ oldworld = {
 	
 	color = { 0.1 0.7 0.1 }
 	
-	interface_skin = { hellenic_interface }
+	interface_skin = { oldworld_interface }
 	
 	# Names given only to Old World characters (base names)
 	male_names = {
@@ -2348,7 +2348,7 @@ oldworld = {
 		
 		color = { 0.3 0.3 0.8 }
 		
-		interface_skin = { americanist_interface }
+		interface_skin = { americanist_interface oldworld_interface }
 
 		crusade_name = INTERVENTION
 		scripture_name = THE_PAPERS
@@ -2407,7 +2407,7 @@ oldworld = {
 		
 		color = { 0.4 0.4 0.9 }
 
-		interface_skin = { americanist_interface }
+		interface_skin = { americanist_interface oldworld_interface }
 		
 		god_names = {
 			GOD_THE_FOUNDERS GOD_WASHINGTON GOD_THE_FLAG
@@ -2449,7 +2449,7 @@ oldworld = {
 		
 		color = { 0.2 0.2 0.7 }
 		
-		interface_skin = { americanist_interface }
+		interface_skin = { americanist_interface oldworld_interface }
 		
 		god_names = {
 			GOD_THE_FOUNDERS GOD_WASHINGTON GOD_JEFFERSON GOD_THE_FLAG
@@ -2494,7 +2494,7 @@ oldworld = {
 		
 		color = { 0.4 0.4 0.4 }
 		
-		interface_skin = { americanist_interface }
+		interface_skin = { americanist_interface oldworld_interface }
 
 		
 		crusade_name = INTERVENTION
@@ -2545,7 +2545,7 @@ oldworld = {
 		
 		color = { 0.05 0.5 0.05 }
 		
-		interface_skin = { consumerist_interface }
+		interface_skin = { consumerist_interface oldworld_interface }
 		
 		crusade_name = MARKETING_CAMPAIGN
 		scripture_name = THE_CATALOG
@@ -2595,7 +2595,7 @@ oldworld = {
 		
 		color = { 0.1 0.4 0.1 }
 		
-		interface_skin = { consumerist_interface }
+		interface_skin = { consumerist_interface oldworld_interface }
 		
 		parent = consumerist
 		
@@ -2640,7 +2640,7 @@ oldworld = {
 		
 		color = { 0.75 1.0 0.2 }
 		
-		interface_skin = { atomicist_interface }
+		interface_skin = { atomicist_interface oldworld_interface }
 
 		high_god_name = GOD_ATOMOS
 
@@ -2663,7 +2663,7 @@ oldworld = {
 		can_grant_divorce = yes
 		can_grant_invasion_cb = invasion
 		
-		#defensive_attrition = yes
+		defensive_attrition = yes
 		
 		religious_clothing_head = 14
 		religious_clothing_priest = 14
@@ -2694,7 +2694,7 @@ oldworld = {
 
 		color = { 0.6 0.4 0.2 }
 		
-		interface_skin = { atomicist_interface }
+		interface_skin = { atomicist_interface oldworld_interface }
 
 		high_god_name = GOD_THE_ELEMENTS
 
@@ -2704,6 +2704,13 @@ oldworld = {
 		evil_god_names = {
 			GOD_ATOMOS THE_DEMON_CORE THE_VOID GOD_FAT_MAN GOD_LITTLE_BOY GOD_TSAR_BOMBA
 		}
+		
+		unit_modifier = {
+			levy_size = 0.3
+			
+			key = "OFF_RELIGION"
+		}
+		
 		crusade_name = FIRST_STRIKE
 		#allow_viking_invasion = yes
 		scripture_name = THE_LECTURES
@@ -2711,12 +2718,15 @@ oldworld = {
 		priests_can_marry = yes
 		female_temple_holders = yes
 		allow_rivermovement = yes
+		ignores_defensive_attrition = yes
+		raised_vassal_opinion_loss = no
 		
 		can_grant_claim = yes
 		can_grant_divorce = yes
 		can_grant_invasion_cb = invasion
 		
 		#defensive_attrition = yes
+		aggression = 2.0 # AI aggression factor
 		
 		religious_clothing_head = 14
 		religious_clothing_priest = 14
@@ -2740,12 +2750,12 @@ oldworld = {
 		heresy_icon = 13
 		
 		color = { 0.7 0.35 0.2 }
-		interface_skin = { rust_cultist_interface hellenic_interface }
+		interface_skin = { rust_cultist_interface oldworld_interface hellenic_interface }
 
-		high_god_name = GOD_FATHER_FORD #removed this blatant 40k reference
+		high_god_name = GOD_THE_TITANS #removed this blatant 40k reference
 
 		god_names = {
-			GOD_FATHER_FORD GOD_THE_MACHINE_SPIRITS GOD_VULCAN GOD_FATHER_BESSEMER
+			GOD_THE_TITANS GOD_FATHER_FORD GOD_FATHER_BESSEMER GOD_FATHER_CARNEGIE GOD_VULCAN GOD_THE_MACHINE_SPIRITS
 		}
 		evil_god_names = {
 			THE_LORD_OF_RUST HE_WHO_RUSTS LUDD
@@ -2785,11 +2795,15 @@ oldworld = {
 		heresy_icon = 13
 		
 		color = { 0.7 0.7 0.62 } #seems appropriate
-		interface_skin = { rust_cultist_interface hellenic_interface }
+		interface_skin = { rust_cultist_interface oldworld_interface hellenic_interface }
 
 		high_god_name = GOD_THE_MACHINE_SPIRITS
 		
 		scripture_name = THE_CHROME_BOOK
+		
+		god_names = {
+			GOD_FATHER_FORD GOD_THE_MACHINE_SPIRITS GOD_VULCAN GOD_FATHER_BESSEMER
+		}
 		
 		character_modifier = {
 			learning = 2
@@ -2914,7 +2928,7 @@ pagan_group = {
 			GOD_THE_SERPENTINE_GOD GOD_THE_BURNING_BUSH GOD_THE_VOICE GOD_THE_LIGHT GOD_THE_WHITE_LAMB 
 		}
 		evil_god_names = {
-			THE_DECEIVER THE_BEAST THE_ANGEL_OF_DEATH MISS_BABYLON
+			GOD_THE_DECEIVER THE_BEAST THE_ANGEL_OF_DEATH MISS_BABYLON
 		}
 		crusade_name = CRUSADE
 		scripture_name = THE_LEGENDS
@@ -2932,7 +2946,7 @@ pagan_group = {
 		can_demand_religious_conversion = no
 		
 		religious_clothing_head = 3
-		religious_clothing_priest = 2
+		religious_clothing_priest = 3
 		intermarry = revelationist_reformed
 		intermarry = trailwalker
 		intermarry = trailwalker_reformed
@@ -3271,7 +3285,7 @@ pagan_group = {
 		high_god_name = GOD_THOR
 
 		god_names = {
-			GOD_THOR GOD_BUNYAN GOD_FREY GOD_VALKYRIE GOD_THE_GREY_WANDERER GOD_HEIKKI_LUNTA
+			GOD_THOR GOD_FREY GOD_VALKYRIE GOD_THE_GREY_WANDERER GOD_BUNYAN GOD_HEIKKI_LUNTA
 		}
 		evil_god_names = {
 			NIDHOG HELA SLAIN_GOD
@@ -3318,7 +3332,7 @@ pagan_group = {
 		high_god_name = GOD_THOR
 
 		god_names = {
-			GOD_THOR GOD_THE_THUNDERER GOD_FREY GOD_VALKYRIE GOD_THE_GREY_WANDERER GOD_BUNYAN GOD_HEIKKI_LUNTA
+			GOD_THOR GOD_FREY GOD_VALKYRIE GOD_THE_GREY_WANDERER GOD_BUNYAN GOD_HEIKKI_LUNTA
 		}
 		evil_god_names = {
 			NIDHOG HELA SLAIN_GOD
@@ -3377,11 +3391,11 @@ pagan_group = {
 		high_god_name = GOD_THE_DAGDA
 		
 		god_names = {
-			GOD_THE_HORNED_GOD GOD_THE_DAGDA GOD_GLOOSCAP GOD_NOKOMIS
-			GOD_MANANNAN_MAC_LIR GOD_LUGH GOD_BRIGID GOD_THE_ANCESTORS
+			GOD_HORNED_ONE GOD_THE_DAGDA GOD_GLOOSCAP GOD_NOKOMIS
+			GOD_MANANNAN GOD_LUGH GOD_BRIGID GOD_THE_ANCESTORS
 		}
 		evil_god_names = {
-			GOD_CAILLEACH OLD_NOLL THE_FOMORIANS
+			GOD_THE_MORRIGAN OLD_NOLL THE_KELPIES
 		}
 		
 		piety_name = AWEN
@@ -3417,11 +3431,11 @@ pagan_group = {
 		high_god_name = GOD_THE_DAGDA
 		
 		god_names = { 
-			GOD_THE_HORNED_GOD GOD_THE_DAGDA GOD_GLOOSCAP GOD_NOKOMIS
-			GOD_MANANNAN_MAC_LIR GOD_LUGH GOD_BRIGID GOD_THE_ANCESTORS
+			GOD_HORNED_ONE GOD_THE_DAGDA GOD_GLOOSCAP GOD_NOKOMIS
+			GOD_MANANNAN GOD_LUGH GOD_BRIGID GOD_THE_ANCESTORS
 		}
 		evil_god_names = {
-			GOD_CAILLEACH OLD_NOLL THE_FOMORIANS
+			GOD_THE_MORRIGAN OLD_NOLL THE_KELPIES
 		}
 		
 		unit_modifier = {	
@@ -3514,6 +3528,8 @@ pagan_group = {
 		allow_looting = yes
 		can_call_crusade = yes
 		join_crusade_if_bordering_hostile = yes
+		men_can_take_consorts = yes
+		women_can_take_consorts = yes
 		max_consorts = 3
 		
 		aggression = 2.0 # AI aggression factor
@@ -3563,6 +3579,8 @@ pagan_group = {
 		allow_looting = yes
 		peace_prestige_loss = yes # Lose Prestige while at peace
 		raised_vassal_opinion_loss = no
+		men_can_take_consorts = yes
+		women_can_take_consorts = yes
 		max_consorts = 3
 		independence_war_score_bonus = 30 # Overrides define CONTESTED_TITLE_OCCUPIED_WARSCORE_BONUS_INDEP
 		reformed = aria_de_machete_reformed
@@ -3606,7 +3624,7 @@ nautical = {
 		high_god_name = GOD_NEPTUNE
 
 		god_names = {
-			GOD_THE_SEA_HAG GOD_NEPTUNE GOD_AGWE GOD_MANANNAN_MAC_LIR
+			GOD_THE_SEA_HAG GOD_NEPTUNE GOD_AGWE GOD_MANANNAN
 		}
 		evil_god_names = {
 			THE_HANGMAN DAVY_JONES
@@ -3732,7 +3750,6 @@ jewish_group = {
 		}
 		
 		can_grant_divorce = yes
-		join_crusade_if_bordering_hostile = yes
 		can_grant_invasion_cb = invasion
 		allow_rivermovement = yes
 		priests_can_marry = yes
@@ -3766,7 +3783,6 @@ jewish_group = {
 		crusade_name = GREAT_HOLY_WAR
 
 		can_grant_divorce = yes
-		join_crusade_if_bordering_hostile = yes
 		can_grant_invasion_cb = invasion
 		allow_rivermovement = yes
 		priests_can_marry = yes
@@ -3800,7 +3816,6 @@ jewish_group = {
 		crusade_name = GREAT_HOLY_WAR
 
 		can_grant_divorce = yes
-		join_crusade_if_bordering_hostile = yes
 		can_grant_invasion_cb = invasion
 		allow_rivermovement = yes
 		priests_can_marry = yes
@@ -3950,8 +3965,8 @@ muslim = {
 	
 		intermarry = imamite
 		intermarry = revivalist
-		intermarry = transcendantalist
-		intermarry = qingzheng
+		intermarry = transcendentalist
+		intermarry = qingzhen
 		intermarry = alawiyya
 		intermarry = orientalist #???
 		intermarry = misrist #???
@@ -4000,8 +4015,8 @@ muslim = {
 	
 		intermarry = imamite
 		intermarry = traditionalist
-		intermarry = transcendantalist
-		intermarry = qingzheng
+		intermarry = transcendentalist
+		intermarry = qingzhen
 		intermarry = alawiyya
 		intermarry = orientalist
 		intermarry = misrist
@@ -4010,7 +4025,7 @@ muslim = {
 		religious_clothing_priest = 5
 	}
 	
-	transcendantalist = {
+	transcendentalist = {
 		graphical_culture = muslimgfx
 		
 		icon = 76
@@ -4028,7 +4043,7 @@ muslim = {
 			GOD_ALLAH GOD_THE_GREATEST GOD_THE_UNSEEN GOD_THE_ALL_KNOWING GOD_THE_ALL_POWERFUL GOD_THE_MERCIFUL GOD_THE_CONQUEROR GOD_THE_MANY_NAMED_GOD
 		}
 		evil_god_names = {
-			GOD_IBLIS THE_DECEIVER ABU_MURRAH
+			GOD_IBLIS GOD_THE_DECEIVER ABU_MURRAH
 		}
 		
 		can_call_crusade = yes
@@ -4050,7 +4065,7 @@ muslim = {
 		intermarry = imamite
 		intermarry = traditionalist
 		intermarry = revivalist
-		intermarry = qingzheng
+		intermarry = qingzhen
 		intermarry = alawiyya
 		intermarry = orientalist
 		intermarry = misrist
@@ -4092,8 +4107,8 @@ muslim = {
 	
 		intermarry = traditionalist
 		intermarry = revivalist
-		intermarry = transcendantalist
-		intermarry = qingzheng
+		intermarry = transcendentalist
+		intermarry = qingzhen
 		intermarry = alawiyya
 		intermarry = orientalist
 		intermarry = misrist
@@ -4103,7 +4118,7 @@ muslim = {
 		religious_clothing_priest = 5
 	}
 	
- 	qingzheng = {
+ 	qingzhen = {
 		graphical_culture = muslimgfx
 		
 		icon = 77
@@ -4112,7 +4127,7 @@ muslim = {
 		parent = imamite
 		color = { 0 0.66 0.42 }
 		crusade_name = JIHAD
-		scripture_name = THE_QURAN
+		scripture_name = THE_REVEALED_PATHS
 		priest_title = IMAM
 	
 		high_god_name = GOD_ALLAH
@@ -4121,7 +4136,7 @@ muslim = {
 		}
 
 		god_names = {
-			GOD_ALLAH GOD_THE_GREATEST
+			GOD_ALLAH GOD_THE_GREATEST GOD_TIAN GOD_ZHENZHU
 		}
 		evil_god_names = {
 			GOD_SHAYTAN GOD_IBLIS
@@ -4141,7 +4156,7 @@ muslim = {
 	
 		intermarry = traditionalist
 		intermarry = revivalist
-		intermarry = transcendantalist
+		intermarry = transcendentalist
 		intermarry = alawiyya
 		intermarry = orientalist
 		intermarry = misrist
@@ -4185,11 +4200,10 @@ muslim = {
 		defensive_attrition = yes
 	
 		intermarry = traditionalist
-		intermarry = revivalist
-		intermarry = transcendantalist
+		intermarry = transcendentalist
 		intermarry = imamite
 		intermarry = revivalist
-		intermarry = qingzheng
+		intermarry = qingzhen
 		intermarry = orientalist
 		intermarry = misrist
 
@@ -4233,11 +4247,11 @@ muslim = {
 
 
 		intermarry = imamite
-		intermarry = qingzheng
+		intermarry = qingzhen
 		intermarry = alawiyya
 		intermarry = traditionalist
 		intermarry = revivalist
-		intermarry = transcendantalist
+		intermarry = transcendentalist
 		intermarry = misrist
 		intermarry = thelemic
 		intermarry = thelemic_reformed
@@ -4283,11 +4297,11 @@ muslim = {
 		rel_head_defense = yes
 
 		intermarry = imamite
-		intermarry = qingzheng
+		intermarry = qingzhen
 		intermarry = alawiyya
 		intermarry = traditionalist
 		intermarry = revivalist
-		intermarry = transcendantalist
+		intermarry = transcendentalist
 		intermarry = orientalist
 		intermarry = thelemic
 		intermarry = thelemic_reformed
