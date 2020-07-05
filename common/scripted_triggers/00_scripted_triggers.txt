@@ -14,7 +14,7 @@
 #has_evil_trait_trigger				Has an evil trait.
 #is_evil_trigger					Has an evil trait and not any benevolent traits.
 #has_unpleasant_trait_trigger		Has an unpleasant personality trait. 
-#has_unpleasant_personality_trigger	Has an  unpleasant personality trait and not any pleasant personality traits.
+#has_unpleasant_personality_trigger	Has an unpleasant personality trait and not any pleasant personality traits.
 #has_impious_trait_trigger			Has an impious trait.
 #is_impious_trigger					Has a impious trait and not any piety traits.
 #has_vice_trigger					Has a vice trait.
@@ -32,7 +32,7 @@
 #is_dumb_trigger					Has a dumb trait.
 #is_strong_trigger					Has a strong trait.
 #is_weak_trigger					Has a weak trait.
-#well_treated_for_disease_trigger   Has a modifier relating to a positive treatement.
+#well_treated_for_disease_trigger	Has a modifier relating to a positive treatement.
 #poorly_treated_for_disease_trigger Has a modifier relating to a negative treatement.
 #character_disease_trigger			Has a disease trait.
 #has_symptom_trigger				Has a symptom trait.
@@ -61,7 +61,7 @@
 
 #Stewardship
 #has_education_stewardship_trigger	Has a stewardship education trait.
-#has_lifestyle_stewardship_trigger	Has a stewardship  lifestyle trait.
+#has_lifestyle_stewardship_trigger	Has a stewardship lifestyle trait.
 #child_personality_stewardship_trigger	Has a child trait with stewardship bonus.
 
 #Intrigue
@@ -782,10 +782,7 @@ has_crusade_trait_trigger = {
 			trait = shaddai
 		}
 		AND = {
-			OR = {
-				religion = espiritista
-				religion = espiritista_reformed
-			}
+			religion = espiritista
 			trait = jaguar_warrior
 		}
 		AND = {
@@ -819,6 +816,21 @@ has_crusade_trait_trigger = {
 				religion = trailwalker_reformed
 			}
 			trait = cavalier
+		}
+		AND = {
+			OR = {
+				religion = aria_de_machete
+				religion = aria_de_machete_reformed
+			}
+			trait = joropo_cantor
+		}
+		AND = {
+			OR = {
+				religion = americanist
+				religion = hamiltonian
+				religion = jeffersonian
+			}
+			trait = medal_of_honor
 		}
 	}
 }
@@ -1008,6 +1020,7 @@ can_be_chancellor_trigger = {
 					OR = { 
 						liege = { has_religion_feature = religion_matriarchal } 
 						liege = { has_religion_feature = religion_equal } 
+						liege = { has_religion_feature = religion_feature_aria_de_machete } 
 						liege = { has_religion_feature = religion_feature_midewiwin } 
 					} 
 				}
@@ -1116,6 +1129,7 @@ can_be_marshal_trigger = {
 					OR = { 
 						liege = { has_religion_feature = religion_matriarchal } 
 						liege = { has_religion_feature = religion_equal } 
+						liege = { has_religion_feature = religion_feature_aria_de_machete } 
 						liege = { has_religion_feature = religion_feature_midewiwin } 
 					} 
 				}
@@ -1216,6 +1230,7 @@ can_be_treasurer_trigger = {
 					OR = { 
 						liege = { has_religion_feature = religion_matriarchal } 
 						liege = { has_religion_feature = religion_equal } 
+						liege = { has_religion_feature = religion_feature_aria_de_machete } 
 						liege = { has_religion_feature = religion_feature_midewiwin } 
 					} 
 				}
@@ -1316,6 +1331,7 @@ can_be_spymaster_trigger = {
 					OR = { 
 						liege = { has_religion_feature = religion_matriarchal } 
 						liege = { has_religion_feature = religion_equal } 
+						liege = { has_religion_feature = religion_feature_aria_de_machete } 
 						liege = { has_religion_feature = religion_feature_midewiwin } 
 					} 
 				}
@@ -1382,8 +1398,8 @@ can_be_spymaster_trigger = {
 				}
 				AND = {
 					religion = church_of_erendira
-					liege = {
-						religion = church_of_erendira
+					liege = { 
+						religion = church_of_erendira 
 						NOR = {
 							liege = { has_religion_feature = religion_matriarchal } 
 							liege = { has_religion_feature = religion_patriarchal } 
@@ -1569,8 +1585,8 @@ can_be_councilmember_king_trigger = {
 					religion = angeline
 					religion = reform
 					religion = sol_invicta
-					religion = neomayan
 					religion = church_of_erendira
+					religion = neomayan
 				}
 				liege = { religion = ROOT }
 			}
@@ -1628,6 +1644,7 @@ can_be_councilmember_emperor_trigger = {
 					OR = { 
 						liege = { has_religion_feature = religion_matriarchal } 
 						liege = { has_religion_feature = religion_equal } 
+						liege = { has_religion_feature = religion_feature_aria_de_machete } 
 						liege = { has_religion_feature = religion_feature_midewiwin } 
 					} 
 				}
@@ -2034,6 +2051,7 @@ gender_equality_trigger = {
 		religion = reform
 		religion = neomayan
 		has_religion_feature = religion_equal
+		has_religion_feature = religion_feature_aria_de_machete
 		has_religion_feature = religion_feature_midewiwin
 		AND = {
 			is_landed = yes
@@ -2097,11 +2115,10 @@ female_can_hold_minor_title_trigger = {
 						religion = neognostic
 						religion = ursuline
 						religion = angeline
-						religion = confederated
 						religion = antinomian
 						religion = nonconformist
 						religion = gaian
-						religion = bickertonite
+						religion = neogodbeite
 						religion = strangite
 						religion = neomayan
 						religion = americanist
@@ -2115,11 +2132,13 @@ female_can_hold_minor_title_trigger = {
 				AND = {
 					OR = {
 						has_religion_feature = religion_equal
+						has_religion_feature = religion_feature_aria_de_machete
 						has_religion_feature = religion_feature_midewiwin
 						has_religion_feature = religion_matriarchal
 					}
 					liege = {
 						has_religion_feature = religion_equal
+						has_religion_feature = religion_feature_aria_de_machete
 						has_religion_feature = religion_feature_midewiwin
 						has_religion_feature = religion_matriarchal
 					}
@@ -2184,11 +2203,13 @@ female_can_hold_minor_commander_title_trigger = {
 				AND = {
 					OR = {
 						has_religion_feature = religion_equal
+						has_religion_feature = religion_feature_aria_de_machete
 						has_religion_feature = religion_feature_midewiwin
 						has_religion_feature = religion_matriarchal
 					}
 					liege = {
 						has_religion_feature = religion_equal
+						has_religion_feature = religion_feature_aria_de_machete
 						has_religion_feature = religion_feature_midewiwin
 						has_religion_feature = religion_matriarchal
 					}
@@ -2283,9 +2304,6 @@ true_religion_candomble_trigger = {
 true_religion_espiritista_trigger = {
 	true_religion = espiritista
 }
-true_religion_espiritista_reformed_trigger = {
-	true_religion = espiritista_reformed
-}
 true_religion_peyotist_trigger = {
 	true_religion = peyotist
 }
@@ -2319,9 +2337,6 @@ true_religion_ursuline_trigger = {
 true_religion_angeline_trigger = {
 	true_religion = angeline
 }
-true_religion_confederated_trigger = {
-	true_religion = confederated
-}
 true_religion_anabaptist_trigger = {
 	true_religion = anabaptist
 }
@@ -2346,6 +2361,9 @@ true_religion_falling_star_trigger = {
 true_religion_moravian_trigger = {
 	true_religion = moravian
 }
+true_religion_wormwoodist_trigger = {
+	true_religion = wormwoodist
+}
 true_religion_high_church_trigger = {
 	true_religion = high_church
 }
@@ -2355,8 +2373,8 @@ true_religion_nonconformist_trigger = {
 true_religion_sacred_heart_trigger = {
 	true_religion = sacred_heart
 }
-true_religion_gracia_divina_trigger = {
-	true_religion = gracia_divina
+true_religion_patria_grande_trigger = {
+	true_religion = patria_grande
 }
 true_religion_cetic_trigger = {
 	true_religion = cetic
@@ -2373,8 +2391,8 @@ true_religion_nousthreskeia_trigger = {
 true_religion_mormon_trigger = {
 	true_religion = mormon
 }
-true_religion_bickertonite_trigger = {
-	true_religion = bickertonite
+true_religion_neogodbeite_trigger = {
+	true_religion = neogodbeite
 }
 true_religion_woolleyite_trigger = {
 	true_religion = woolleyite
@@ -2391,8 +2409,8 @@ true_religion_church_of_erendira_trigger = {
 true_religion_mictlantec_trigger = {
 	true_religion = mictlantec
 }
-true_religion_uahomche_trigger = {
-	true_religion = uahomche
+true_religion_qabantajik_trigger = {
+	true_religion = qabantajik
 }
 true_religion_neomayan_trigger = {
 	true_religion = neomayan
@@ -2460,6 +2478,12 @@ true_religion_celtic_pagan_trigger = {
 true_religion_celtic_pagan_reformed_trigger = {
 	true_religion = celtic_pagan_reformed
 }
+true_religion_aria_de_machete_trigger = {
+	true_religion = aria_de_machete
+}
+true_religion_aria_de_machete_reformed_trigger = {
+	true_religion = aria_de_machete_reformed
+}
 true_religion_brethren_trigger = {
 	true_religion = brethren
 }
@@ -2481,11 +2505,14 @@ true_religion_traditionalist_trigger = {
 true_religion_revivalist_trigger = {
 	true_religion = revivalist
 }
+true_religion_transcendentalist_trigger = {
+	true_religion = transcendentalist
+}
 true_religion_imamite_trigger = {
 	true_religion = imamite
 }
-true_religion_qingzheng_trigger = {
-	true_religion = qingzheng
+true_religion_qingzhen_trigger = {
+	true_religion = qingzhen
 }
 true_religion_alawiyya_trigger = {
 	true_religion = alawiyya
@@ -2542,8 +2569,8 @@ true_religion_group_oldworld_trigger = {
 true_religion_group_pagan_group_trigger = {
 	true_religion_group = pagan_group
 }
-true_religion_group_pirate_trigger = {
-	true_religion_group = pirate
+true_religion_group_nautical_trigger = {
+	true_religion_group = nautical
 }
 true_religion_group_jewish_group_trigger = {
 	true_religion_group = jewish_group
@@ -2680,26 +2707,26 @@ ROOTs_secret_religion_is_playable_trigger = {
 # To block players from getting a game over if they don't own all DLCs
 	hidden_tooltip = {
 		OR = {
-			secret_religion_group  = christian
-			secret_religion_group  = afro_syncretic
-			secret_religion_group  = american_native
-			secret_religion_group  = amero_syncretic
-			secret_religion_group  = cult_of_saints
-			secret_religion_group  = latter_day_saints
-			secret_religion_group  = oldworld
-			secret_religion_group  = pirate
-			secret_religion_group  = mesoamerican_gods
-			secret_religion_group  = pacific
+			secret_religion_group = christian
+			secret_religion_group = afro_syncretic
+			secret_religion_group = american_native
+			secret_religion_group = amero_syncretic
+			secret_religion_group = cult_of_saints
+			secret_religion_group = latter_day_saints
+			secret_religion_group = oldworld
+			secret_religion_group = nautical
+			secret_religion_group = mesoamerican_gods
+			secret_religion_group = pacific
 			AND = {
-				secret_religion_group  = jewish_group
+				secret_religion_group = jewish_group
 				has_dlc = "Sons of Abraham"
 			}
 			AND = {
-				secret_religion_group  = muslim
+				secret_religion_group = muslim
 				has_dlc = "The Sword of Islam" 
 			}
 			AND = {
-				secret_religion_group  = indian_group
+				secret_religion_group = indian_group
 				has_dlc = "Rajas of India" 
 			}
 			#AND = {
@@ -2727,31 +2754,31 @@ ROOTs_secret_religion_is_playable_trigger = {
 
 	trigger_if = {
 		limit = {
-			secret_religion_group  = jewish_group
+			secret_religion_group = jewish_group
 			NOT = { has_dlc = "Sons of Abraham" }
 		}
 		AND = {
-			secret_religion_group  = jewish_group
+			secret_religion_group = jewish_group
 			has_dlc = "Sons of Abraham"
 		}
 	}
 	trigger_if = {
 		limit = {
-			secret_religion_group  = muslim
+			secret_religion_group = muslim
 			NOT = { has_dlc = "The Sword of Islam" }
 		}
 		AND = {
-			secret_religion_group  = muslim
+			secret_religion_group = muslim
 			has_dlc = "The Sword of Islam" 
 		}
 	}
 	trigger_if = {
 		limit = {
-			secret_religion_group  = indian_group
+			secret_religion_group = indian_group
 			NOT = { has_dlc = "Rajas of India" }
 		}
 		AND = {
-			secret_religion_group  = indian_group
+			secret_religion_group = indian_group
 				has_dlc = "Rajas of India" 
 		}
 	}
@@ -2777,7 +2804,7 @@ ROOTs_secret_religion_is_playable_trigger = {
 	#}
 	trigger_if = {
 		limit = {
-			secret_religion_group  = pagan_group
+			secret_religion_group = pagan_group
 			NOR = { 
 				has_dlc = "The Old Gods" 
 				has_dlc = "Holy Fury"
@@ -2793,7 +2820,7 @@ ROOTs_secret_religion_is_playable_trigger = {
 	}
 	#trigger_if = {
 	#	limit = {
-	#		secret_religion_group  = zoroastrian_group
+	#		secret_religion_group = zoroastrian_group
 	#		NOT = { has_dlc = "The Old Gods" }
 	#	}
 	#	AND = {
@@ -3056,6 +3083,7 @@ has_negative_congenital_trigger = {
 		trait = stutter
 		trait = lisp
 		trait = slow
+		trait = distractible
 		trait = inbred
 		trait = weak
 		trait = imbecile
@@ -3248,9 +3276,17 @@ is_celtic_secret_religious_society_member_trigger = {
 	}
 }
 
-is_pirate_secret_religious_society_member_trigger = {
+is_aria_de_machete_secret_religious_society_member_trigger = {
 	society_member_of = secret_religious_cult
-	secret_religion_group = pirate
+	OR = {
+		society_member_of = secret_religious_society_aria_de_machete
+		society_member_of = secret_religious_society_aria_de_machete_reformed
+	}
+}
+
+is_nautical_secret_religious_society_member_trigger = {
+	society_member_of = secret_religious_cult
+	secret_religion_group = nautical
 }
 
 is_jewish_secret_religious_society_member_trigger = {
@@ -3314,8 +3350,8 @@ has_sympathy_for_true_religion_of_prev_trigger = {
 			PREV = { true_religion_group_pagan_group_trigger = yes }
 		}
 		AND = {
-			trait = sympathy_pirate
-			PREV = { true_religion_group_pirate_trigger = yes }
+			trait = sympathy_nautical
+			PREV = { true_religion_group_nautical_trigger = yes }
 		}
 		AND = {
 			trait = sympathy_judaism
@@ -3375,8 +3411,8 @@ has_sympathy_for_true_religion_of_root_trigger = {
 			ROOT = { true_religion_group_pagan_group_trigger = yes }
 		}
 		AND = {
-			trait = sympathy_pirate
-			ROOT = { true_religion_group_pirate_trigger = yes }
+			trait = sympathy_nautical
+			ROOT = { true_religion_group_nautical_trigger = yes }
 		}
 		AND = {
 			trait = sympathy_judaism
@@ -3449,8 +3485,8 @@ ok_sr_sympathy_mission_target_trigger = {
 				PREV = { trait = sympathy_pagans }
 			}
 			AND = {
-				true_religion_group = pirate
-				PREV = { trait = sympathy_pirate }
+				true_religion_group = nautical
+				PREV = { trait = sympathy_nautical }
 			}
 			AND = {
 				true_religion_group = jewish_group
@@ -3506,10 +3542,6 @@ is_in_prevs_interesting_society_trigger = {
 			PREV = { interested_in_society = secret_religious_society_espiritista }
 		}
 		AND = {
-			society_member_of = secret_religious_society_espiritista_reformed
-			PREV = { interested_in_society = secret_religious_society_espiritista_reformed }
-		}
-		AND = {
 			society_member_of = secret_religious_society_peyotist
 			PREV = { interested_in_society = secret_religious_society_peyotist }
 		}
@@ -3550,10 +3582,6 @@ is_in_prevs_interesting_society_trigger = {
 			PREV = { interested_in_society = secret_religious_society_angeline }
 		}
 		AND = {
-			society_member_of = secret_religious_society_confederated
-			PREV = { interested_in_society = secret_religious_society_confederated }
-		}
-		AND = {
 			society_member_of = secret_religious_society_anabaptist
 			PREV = { interested_in_society = secret_religious_society_anabaptist }
 		}
@@ -3586,6 +3614,10 @@ is_in_prevs_interesting_society_trigger = {
 			PREV = { interested_in_society = secret_religious_society_moravian }
 		}
 		AND = {
+			society_member_of = secret_religious_society_wormwoodist
+			PREV = { interested_in_society = secret_religious_society_wormwoodist }
+		}
+		AND = {
 			society_member_of = secret_religious_society_high_church
 			PREV = { interested_in_society = secret_religious_society_high_church }
 		}
@@ -3598,8 +3630,8 @@ is_in_prevs_interesting_society_trigger = {
 			PREV = { interested_in_society = secret_religious_society_sacred_heart }
 		}
 		AND = {
-			society_member_of = secret_religious_society_gracia_divina
-			PREV = { interested_in_society = secret_religious_society_gracia_divina }
+			society_member_of = secret_religious_society_patria_grande
+			PREV = { interested_in_society = secret_religious_society_patria_grande }
 		}
 		AND = {
 			society_member_of = secret_religious_society_cetic
@@ -3622,8 +3654,8 @@ is_in_prevs_interesting_society_trigger = {
 			PREV = { interested_in_society = secret_religious_society_mormon }
 		}
 		AND = {
-			society_member_of = secret_religious_society_bickertonite
-			PREV = { interested_in_society = secret_religious_society_bickertonite }
+			society_member_of = secret_religious_society_neogodbeite
+			PREV = { interested_in_society = secret_religious_society_neogodbeite }
 		}
 		AND = {
 			society_member_of = secret_religious_society_woolleyite
@@ -3646,8 +3678,8 @@ is_in_prevs_interesting_society_trigger = {
 			PREV = { interested_in_society = secret_religious_society_mictlantec }
 		}
 		AND = {
-			society_member_of = secret_religious_society_uahomche
-			PREV = { interested_in_society = secret_religious_society_uahomche }
+			society_member_of = secret_religious_society_qabantajik
+			PREV = { interested_in_society = secret_religious_society_qabantajik }
 		}
 		AND = {
 			society_member_of = secret_religious_society_neomayan
@@ -3681,10 +3713,10 @@ is_in_prevs_interesting_society_trigger = {
 			society_member_of = secret_religious_society_atomicist
 			PREV = { interested_in_society = secret_religious_society_atomicist }
 		}
-		AND = {
-			society_member_of = secret_religious_society_pagan
-			PREV = { interested_in_society = secret_religious_society_pagan }
-		}
+		#AND = {
+		#	society_member_of = secret_religious_society_pagan
+		#	PREV = { interested_in_society = secret_religious_society_pagan }
+		#}
 		AND = {
 			society_member_of = secret_religious_society_revelationist_reformed
 			PREV = { interested_in_society = secret_religious_society_revelationist_reformed }
@@ -3734,6 +3766,14 @@ is_in_prevs_interesting_society_trigger = {
 			PREV = { interested_in_society = secret_religious_society_celtic_pagan_reformed }
 		}
 		AND = {
+			society_member_of = secret_religious_society_aria_de_machete
+			PREV = { interested_in_society = secret_religious_society_aria_de_machete }
+		}
+		AND = {
+			society_member_of = secret_religious_society_aria_de_machete_reformed
+			PREV = { interested_in_society = secret_religious_society_aria_de_machete_reformed }
+		}
+		AND = {
 			society_member_of = secret_religious_society_brethren
 			PREV = { interested_in_society = secret_religious_society_brethren }
 		}
@@ -3762,12 +3802,16 @@ is_in_prevs_interesting_society_trigger = {
 			PREV = { interested_in_society = secret_religious_society_revivalist }
 		}
 		AND = {
+			society_member_of = secret_religious_society_transcendentalist
+			PREV = { interested_in_society = secret_religious_society_transcendentalist }
+		}
+		AND = {
 			society_member_of = secret_religious_society_imamite
 			PREV = { interested_in_society = secret_religious_society_imamite }
 		}
 		AND = {
-			society_member_of = secret_religious_society_qingzheng
-			PREV = { interested_in_society = secret_religious_society_qingzheng }
+			society_member_of = secret_religious_society_qingzhen
+			PREV = { interested_in_society = secret_religious_society_qingzhen }
 		}
 		AND = {
 			society_member_of = secret_religious_society_alawiyya
@@ -3815,7 +3859,7 @@ is_openly_of_prevs_true_religion_group = {
 
 is_visible_to_self_trigger = { #For hidden modifiers
 	custom_tooltip = {
-		text =  is_visible_to_self_trigger_tooltip
+		text = is_visible_to_self_trigger_tooltip
 		character = FROM
 	}
 }
@@ -3847,15 +3891,9 @@ has_any_char_old_religion = {
 			}
 		}
 		AND = {
-			has_character_flag = character_was_espiritista_reformed
-			any_character = {
-				religion = espiritista_reformed
-			}
-		}
-		AND = {
 			has_character_flag = character_was_espiritista
 			any_character = {
-				religion = character_was_espiritista
+				religion = espiritista
 			}
 		}
 		AND = { 
@@ -3973,6 +4011,12 @@ has_any_char_old_religion = {
 			}
 		}
 		AND = {
+			has_character_flag = character_was_wormwoodist
+			any_character = {
+				religion = wormwoodist
+			}
+		}
+		AND = {
 			has_character_flag = character_was_high_church
 			any_character = {
 				religion = high_church
@@ -3991,9 +4035,9 @@ has_any_char_old_religion = {
 			}
 		}
 		AND = {
-			has_character_flag = character_was_folclorista
+			has_character_flag = character_was_celeste
 			any_character = {
-				religion = folclorista
+				religion = celeste
 			}
 		}
 		AND = {
@@ -4003,9 +4047,9 @@ has_any_char_old_religion = {
 			}
 		}
 		AND = { 
-			has_character_flag = character_was_gracia_divina
+			has_character_flag = character_was_patria_grande
 			any_character = {
-				religion = gracia_divina
+				religion = patria_grande
 			}
 		}
 		AND = {
@@ -4051,9 +4095,9 @@ has_any_char_old_religion = {
 			}
 		}
 		AND = { 
-			has_character_flag = character_was_bickertonite
+			has_character_flag = character_was_neogodbeite
 			any_character = {
-				religion = bickertonite
+				religion = neogodbeite
 			}
 		}
 		AND = { 
@@ -4075,9 +4119,9 @@ has_any_char_old_religion = {
 			}
 		}
 		AND = { 
-			has_character_flag = character_was_uahomche
+			has_character_flag = character_was_qabantajik
 			any_character = {
-				religion = uahomche
+				religion = qabantajik
 			}
 		}
 		AND = { 
@@ -4207,6 +4251,18 @@ has_any_char_old_religion = {
 			}
 		}
 		AND = { 
+			has_character_flag = character_was_aria_de_machete
+			any_character = {
+				religion = aria_de_machete
+			}
+		}
+		AND = { 
+			has_character_flag = character_was_aria_de_machete_reformed
+			any_character = {
+				religion = aria_de_machete_reformed
+			}
+		}
+		AND = { 
 			has_character_flag = character_was_brethren
 			any_character = {
 				religion = brethren
@@ -4249,15 +4305,21 @@ has_any_char_old_religion = {
 			}
 		}
 		AND = { 
+			has_character_flag = character_was_transcendentalist
+			any_character = {
+				religion = transcendentalist
+			}
+		}
+		AND = { 
 			has_character_flag = character_was_imamite
 			any_character = {
 				religion = imamite
 			}
 		}
 		AND = { 
-			has_character_flag = character_was_qingzheng
+			has_character_flag = character_was_qingzhen
 			any_character = {
-				religion = qingzheng
+				religion = qingzhen
 			}
 		}
 		AND = { 
@@ -4364,6 +4426,7 @@ has_satanists_prerequisites = {
 		religion_group = latter_day_saints
 		religion_group = cult_of_saints
 		religion_group = jewish_group
+		religion_group = muslim
 		religion = revelationist
 		religion = revelationist_reformed
 		religion = trailwalker
@@ -4371,6 +4434,8 @@ has_satanists_prerequisites = {
 		religion = orthodox
 		religion = exovedate
 		religion = rastafarian
+		religion = aria_de_machete
+		religion = aria_de_machete_reformed
 	}
 }
 
@@ -4410,7 +4475,7 @@ has_bohemian_grove_prerequisites = {
 
 has_davy_jones_mates_prerequisites = {
 	has_common_devilworship_prerequisites = yes
-	religion_group = pirate
+	religion_group = nautical
 }
 
 has_starry_wisdom_prerequisites = {
@@ -4558,13 +4623,6 @@ looting_artifact_event_religious_artifacts_trigger = {
 		NAND = {
 			any_artifact = {
 				has_artifact_flag = looted_artifact_tooltip_1
-				has_artifact_flag = espiritista_reformed
-				ROOT = { religion = espiritista_reformed }
-			}
-		}
-		NAND = {
-			any_artifact = {
-				has_artifact_flag = looted_artifact_tooltip_1
 				has_artifact_flag = peyotist
 				ROOT = { religion = peyotist }
 			}
@@ -4642,13 +4700,6 @@ looting_artifact_event_religious_artifacts_trigger = {
 		NAND = {
 			any_artifact = {
 				has_artifact_flag = looted_artifact_tooltip_1
-				has_artifact_flag = confederated
-				ROOT = { religion = confederated }
-			}
-		}
-		NAND = {
-			any_artifact = {
-				has_artifact_flag = looted_artifact_tooltip_1
 				has_artifact_flag = anabaptist
 				ROOT = { religion = anabaptist }
 			}
@@ -4705,6 +4756,13 @@ looting_artifact_event_religious_artifacts_trigger = {
 		NAND = {
 			any_artifact = {
 				has_artifact_flag = looted_artifact_tooltip_1
+				has_artifact_flag = wormwoodist
+				ROOT = { religion = wormwoodist }
+			}
+		}
+		NAND = {
+			any_artifact = {
+				has_artifact_flag = looted_artifact_tooltip_1
 				has_artifact_flag = high_church
 				ROOT = { religion = high_church }
 			}
@@ -4726,8 +4784,8 @@ looting_artifact_event_religious_artifacts_trigger = {
 		NAND = {
 			any_artifact = {
 				has_artifact_flag = looted_artifact_tooltip_1
-				has_artifact_flag = gracia_divina
-				ROOT = { religion = gracia_divina }
+				has_artifact_flag = patria_grande
+				ROOT = { religion = patria_grande }
 			}
 		}
 		NAND = {
@@ -4768,8 +4826,8 @@ looting_artifact_event_religious_artifacts_trigger = {
 		NAND = {
 			any_artifact = {
 				has_artifact_flag = looted_artifact_tooltip_1
-				has_artifact_flag = bickertonite
-				ROOT = { religion = bickertonite }
+				has_artifact_flag = neogodbeite
+				ROOT = { religion = neogodbeite }
 			}
 		}
 		NAND = {
@@ -4810,8 +4868,8 @@ looting_artifact_event_religious_artifacts_trigger = {
 		NAND = {
 			any_artifact = {
 				has_artifact_flag = looted_artifact_tooltip_1
-				has_artifact_flag = uahomche
-				ROOT = { religion = uahomche }
+				has_artifact_flag = qabantajik
+				ROOT = { religion = qabantajik }
 			}
 		}
 		NAND = {
@@ -4964,6 +5022,20 @@ looting_artifact_event_religious_artifacts_trigger = {
 		NAND = {
 			any_artifact = {
 				has_artifact_flag = looted_artifact_tooltip_1
+				has_artifact_flag = aria_de_machete
+				ROOT = { religion = aria_de_machete }
+			}
+		}
+		NAND = {
+			any_artifact = {
+				has_artifact_flag = looted_artifact_tooltip_1
+				has_artifact_flag = aria_de_machete_reformed
+				ROOT = { religion = aria_de_machete_reformed }
+			}
+		}
+		NAND = {
+			any_artifact = {
+				has_artifact_flag = looted_artifact_tooltip_1
 				has_artifact_flag = brethren
 				ROOT = { religion = brethren }
 			}
@@ -5013,6 +5085,13 @@ looting_artifact_event_religious_artifacts_trigger = {
 		NAND = {
 			any_artifact = {
 				has_artifact_flag = looted_artifact_tooltip_1
+				has_artifact_flag = transcendentalist
+				ROOT = { religion = transcendentalist }
+			}
+		}
+		NAND = {
+			any_artifact = {
+				has_artifact_flag = looted_artifact_tooltip_1
 				has_artifact_flag = imamite
 				ROOT = { religion = imamite }
 			}
@@ -5020,8 +5099,8 @@ looting_artifact_event_religious_artifacts_trigger = {
 		NAND = {
 			any_artifact = {
 				has_artifact_flag = looted_artifact_tooltip_1
-				has_artifact_flag = qingzheng
-				ROOT = { religion = qingzheng }
+				has_artifact_flag = qingzhen
+				ROOT = { religion = qingzhen }
 			}
 		}
 		NAND = {
@@ -5722,6 +5801,8 @@ has_unsafe_secret_religion = {
 				secret_religion = thelemic_reformed
 				secret_religion = celtic_pagan
 				secret_religion = celtic_pagan_reformed
+				secret_religion = aria_de_machete
+				secret_religion = aria_de_machete_reformed
 			}
 		}
 		AND = {
@@ -6151,7 +6232,7 @@ china_offmap_decisions_enabled_trigger = {
 		governor = {
 			show_scope_change = no
 			is_within_diplo_range = FROM
-			hidden_trigger  = { NOT = { character = FROM } } #Governor cannot use boon/tributes decisions
+			hidden_trigger = { NOT = { character = FROM } } #Governor cannot use boon/tributes decisions
 		}
 	}
 	custom_tooltip = {
@@ -6190,7 +6271,7 @@ china_offmap_hostile_decisions_enabled_trigger = {
 		governor = {
 			show_scope_change = no
 			is_within_diplo_range = FROM
-			hidden_trigger  = { NOT = { character = FROM } } #Governor cannot use boon/tributes decisions
+			hidden_trigger = { NOT = { character = FROM } } #Governor cannot use boon/tributes decisions
 		}
 		offmap_ruler = {
 			NOT = { dynasty = FROM }
@@ -6320,7 +6401,7 @@ likes_andino = {
 }
 likes_caribbanglo = {
 	OR = {
-		culture_group = carribbanglo
+		culture_group = caribbanglo
 		culture_group = mesanglo
 	}
 }
@@ -6345,6 +6426,9 @@ likes_orinocense = {
 }
 likes_amerodeutsch = {
 	culture_group = amerodeutsch
+}
+likes_viking = {
+	culture_group = ameronordic
 }
 likes_mexicano = {
 	culture_group = mexicano
@@ -6374,9 +6458,9 @@ likes_native_americans = { #ALL Native American culture groups
 		culture = metis
 		culture_group = eastern_woodlands
 		culture_group = plains
-		culture_group = plateau
+		culture_group = interior
 		culture_group = athabaskan
-		culture_group = southwestern
+		culture_group = plateau
 		culture_group = anishinaabe
 		culture_group = subarctic
 		culture_group = northwest_coast
@@ -6435,8 +6519,8 @@ likes_rastafarian = {
 likes_voodoo = {
 	religion = voodoo
 }
-likes_pirate = {
-	religion_group = pirate
+likes_nautical = {
+	religion_group = nautical
 }
 likes_christians = {
 	religion_group = christian
@@ -6447,8 +6531,8 @@ likes_mormons = {
 likes_jews = {
 	religion_group = jewish_group
 }
-likes_gracia_divina = {
-	religion = gracia_divina
+likes_patria_grande = {
+	religion = patria_grande
 }
 likes_sacred_heart = {
 	religion = sacred_heart
@@ -6460,10 +6544,7 @@ likes_candomble = {
 	religion = candomble
 }
 likes_espiritista = {
-	OR = {
-		religion = espiritista
-		religion = espiritista_reformed
-	}
+	religion = espiritista
 }
 likes_hindus = {
 	religion_group = indian_group
@@ -6509,8 +6590,9 @@ has_unsafe_religion = {
 			OR = {
 				religion = traditionalist
 				religion = revivalist
+				religion = transcendentalist
 				religion = imamite
-				religion = qingzheng
+				religion = qingzhen
 				religion = alawiyya
 				religion = orientalist
 				religion = misrist
@@ -6540,6 +6622,8 @@ has_unsafe_religion = {
 				religion = thelemic_reformed
 				religion = celtic_pagan
 				religion = celtic_pagan_reformed
+				religion = aria_de_machete
+				religion = aria_de_machete_reformed
 			}
 		}
 		AND = {
@@ -6823,7 +6907,7 @@ potentially_interested_in_rivaling_root_trigger = { #must be a character
 	NOT = { opinion = { who = ROOT value = 5 } }
 	OR = {
 		ROOT = { is_foe = PREV } #checks if the current scope has committed a crime against ROOT (I hope)
-		is_foe = ROOT  #checks if root has committed a crime against the current scope
+		is_foe = ROOT #checks if root has committed a crime against the current scope
 		NOT = { opinion = { who = ROOT value = -25 } }
 		this_has_terrible_opinion_modifier_of_root_trigger = yes
 		#Fill up with fun opinion modifiers, whenever you think of them...! Ideas: opinion_spurned, opinion_revoked_my_title, etc
@@ -6837,7 +6921,7 @@ root_potentially_interested_in_rivaling_this_trigger = { #must be a character
 	NOT = { reverse_opinion = { who = ROOT value = 5 } }
 	OR = {
 		ROOT = { is_foe = PREV } #checks if the current scope has committed a crime against ROOT (I hope)
-		is_foe = ROOT  #checks if root has committed a crime against the current scope
+		is_foe = ROOT #checks if root has committed a crime against the current scope
 		NOT = { reverse_opinion = { who = ROOT value = -25 } }
 		root_has_terrible_opinion_modifier_of_this_trigger = yes
 		#Fill up with fun opinion modifiers, whenever you think of them...! Ideas: opinion_spurned, opinion_revoked_my_title, etc
@@ -7000,7 +7084,7 @@ pagan_baptism_trigger = {
 		trigger = { has_character_modifier = baptism_request_cooldown }
 		custom_tooltip = {
 			text = NOT_ASKED_BAPTISM_RECENTLY
-			hidden_tooltip = {  
+			hidden_tooltip = { 
 				NOT = { has_character_modifier = baptism_request_cooldown } 
 			} 
 		} 
@@ -7157,28 +7241,20 @@ needs_coronation_trigger = {
 
 ruler_has_dedicated_temple_trigger = { #probably won't be used
 	OR = {
-		has_character_modifier = dedicated_to_zeus
-		has_character_modifier = dedicated_to_poseidon
-		has_character_modifier = dedicated_to_hades
-		has_character_modifier = dedicated_to_hermes
-		has_character_modifier = dedicated_to_demeter
-		has_character_modifier = dedicated_to_athena
-		has_character_modifier = dedicated_to_apollo
-		has_character_modifier = dedicated_to_arthemis
-		has_character_modifier = dedicated_to_ares
-		has_character_modifier = dedicated_to_aphrodite
-		has_character_modifier = dedicated_to_ephaestus
-		has_character_modifier = dedicated_to_hestia
+		has_character_modifier = dedicated_to_washington
+		has_character_modifier = dedicated_to_roosevelt
+		has_character_modifier = dedicated_to_jefferson
+		has_character_modifier = dedicated_to_lincoln
 	}
 }
 
 martyrs_death_trigger = {
 	OR = {
 		death_reason = death_sacrificed
-  		death_reason = death_sacrificed_norse
-  		death_reason = death_sacrificed_ancestors
-  		death_reason = death_execution_aztec_sacrifice
-  		
+ 		death_reason = death_sacrificed_norse
+ 		death_reason = death_sacrificed_ancestors
+ 		death_reason = death_execution_aztec_sacrifice
+ 		
 	}
 }
 can_build_hillfort_trigger = {
@@ -7457,7 +7533,7 @@ no_grievance_trigger = {
 }
 
 is_inaccessible_or_incapable_trigger = {
-	OR = {  
+	OR = { 
 		is_inaccessible_trigger = yes
 		is_incapable = yes
 		prisoner = yes
@@ -7595,7 +7671,7 @@ lower_educational_trait_trigger = {
 }
 
 has_scarred_trait_trigger = {
-	OR = {  
+	OR = { 
 		trait = scarred
 		trait = scarred_mid
 		trait = scarred_high
@@ -7606,7 +7682,7 @@ this_is_warrior_culture_trigger = { #Not really about culture - Used in AI votin
 	NOT = { pacifist = yes }
 	OR = { 
 		religion_group = mesoamerican_gods
-		religion_group = pirate
+		religion_group = nautical
 		religion = norse_pagan
 		religion = raven_tales
 		religion = thelemic
@@ -7646,7 +7722,7 @@ this_is_diplomatic_culture_trigger = { #Not really about culture - Used in AI vo
 		religion = rust_cultist
 		religion = chrome_cultist
 		has_religion_feature = religion_cosmopolitan
-		has_religion_feature = religion_feature_espiritista
+		
 		#AND = {
 		#	NOT = { has_dlc = "Holy Fury"}
 		#	religion = rust_cultist_reformed
@@ -8122,7 +8198,7 @@ this_has_super_cool_nickname_trigger = {
 		has_nickname = nick_gods_hedonist 
 		has_nickname = nick_gods_cannibal 
 		has_nickname = nick_gods_drunkard
-		has_nickname = nick_papal_lover  
+		has_nickname = nick_papal_lover 
 		has_nickname = nick_gods_seducer 
 		has_nickname = nick_the_red_storm
 		has_nickname = nick_the_scarlet_hands
@@ -8492,7 +8568,7 @@ has_any_sympathy_trait_trigger = {
 		trait = sympathy_latter_day_saints
 		trait = sympathy_mesoamerican_gods
 		trait = sympathy_oldworld
-		trait = sympathy_pirate
+		trait = sympathy_nautical
 	}
 }
 
@@ -8744,10 +8820,9 @@ reconquista_check_trigger = { #okay...
 	any_war = {
 		OR = {
 			using_cb = reconquista_jalisco
-			using_cb = reconquista_colima
 			using_cb = reconquista_michoacan
 			using_cb = reconquista_mixteca
-			using_cb = reconquista_zapoteca
+			using_cb = reconquista_oaxaca
 			using_cb = reconquista_mexicoast
 			using_cb = reconquista_mexico
 			using_cb = reconquista_bajio
@@ -8762,10 +8837,9 @@ not_reconquista_check_trigger = {
 		any_war = {
 			OR = {
 				using_cb = reconquista_jalisco
-				using_cb = reconquista_colima
 				using_cb = reconquista_michoacan
 				using_cb = reconquista_mixteca
-				using_cb = reconquista_zapoteca
+				using_cb = reconquista_oaxaca
 				using_cb = reconquista_mexicoast
 				using_cb = reconquista_mexico
 				using_cb = reconquista_bajio
@@ -8943,7 +9017,7 @@ varangian_guard_events_default_trigger = {
 	age = 16
 	is_incapable = no
 	prisoner = no
-	culture_group = north_germanic
+	culture_group = ameronordic
 	has_character_flag = serving_varangian
 	has_dlc = "The Old Gods"
 }
@@ -8994,7 +9068,7 @@ can_still_be_commander_byzantine_trigger = {
 	NOT = { has_character_modifier = refusing_to_lead }
 	NOR = { 
 		war_with = FROMFROM
-		any_liege = {  
+		any_liege = { 
 			war_with = FROMFROM
 		}
 	}
@@ -9051,7 +9125,7 @@ can_still_be_marshal_byzantine_trigger = {
 	}
 	NOR = { 
 		war_with = FROMFROM
-		any_liege = {  
+		any_liege = { 
 			war_with = FROMFROM
 		}
 	}
@@ -9067,6 +9141,7 @@ can_still_be_marshal_byzantine_trigger = {
 					OR = { 
 						liege = { has_religion_feature = religion_matriarchal } 
 						liege = { has_religion_feature = religion_equal } 
+						liege = { has_religion_feature = religion_feature_aria_de_machete } 
 						liege = { has_religion_feature = religion_feature_midewiwin } 
 					} 
 				}
@@ -9213,7 +9288,6 @@ has_character_was_religion_flag_trigger = {
 		has_character_flag = character_was_santeria
 		has_character_flag = character_was_candomble
 		has_character_flag = character_was_espiritista
-		has_character_flag = character_was_espiritista_reformed
 		has_character_flag = character_was_peyotist
 		has_character_flag = character_was_midewiwin
 		has_character_flag = character_was_midewiwin_reformed
@@ -9225,7 +9299,6 @@ has_character_was_religion_flag_trigger = {
 		has_character_flag = character_was_nestorian
 		has_character_flag = character_was_ursuline
 		has_character_flag = character_was_angeline
-		has_character_flag = character_was_confederated
 		has_character_flag = character_was_anabaptist
 		has_character_flag = character_was_batenburger
 		has_character_flag = character_was_evangelical
@@ -9234,24 +9307,25 @@ has_character_was_religion_flag_trigger = {
 		has_character_flag = character_was_postadventist
 		has_character_flag = character_was_falling_star
 		has_character_flag = character_was_moravian
+		has_character_flag = character_was_wormwoodist
 		has_character_flag = character_was_high_church
 		has_character_flag = character_was_nonconformist
 		has_character_flag = character_was_apostolic
-		has_character_flag = character_was_folclorista
+		has_character_flag = character_was_celeste
 		has_character_flag = character_was_sacred_heart
-		has_character_flag = character_was_gracia_divina
+		has_character_flag = character_was_patria_grande
 		has_character_flag = character_was_cetic
 		has_character_flag = character_was_gaian
 		has_character_flag = character_was_shinto
 		has_character_flag = character_was_nousthreskeia
 		has_character_flag = character_was_mormon
-		has_character_flag = character_was_bickertonite
+		has_character_flag = character_was_neogodbeite
 		has_character_flag = character_was_woolleyite
 		has_character_flag = character_was_strangite
 		has_character_flag = character_was_sol_invicta
 		has_character_flag = character_was_church_of_erendira
 		has_character_flag = character_was_mictlantec
-		has_character_flag = character_was_uahomche
+		has_character_flag = character_was_qabantajik
 		has_character_flag = character_was_neomayan
 		has_character_flag = character_was_americanist
 		has_character_flag = character_was_hamiltonian
@@ -9274,6 +9348,8 @@ has_character_was_religion_flag_trigger = {
 		has_character_flag = character_was_norse_pagan
 		has_character_flag = character_was_celtic_pagan
 		has_character_flag = character_was_celtic_pagan_reformed
+		has_character_flag = character_was_aria_de_machete
+		has_character_flag = character_was_aria_de_machete_reformed
 		has_character_flag = character_was_brethren
 		has_character_flag = character_was_jewish
 		has_character_flag = character_was_reform
@@ -9281,8 +9357,9 @@ has_character_was_religion_flag_trigger = {
 		has_character_flag = character_was_hindu
 		has_character_flag = character_was_traditionalist
 		has_character_flag = character_was_revivalist
+		has_character_flag = character_was_transcendentalist
 		has_character_flag = character_was_imamite
-		has_character_flag = character_was_qingzheng
+		has_character_flag = character_was_qingzhen
 		has_character_flag = character_was_alawiyya
 		has_character_flag = character_was_orientalist
 		has_character_flag = character_was_misrist
@@ -9303,16 +9380,13 @@ is_feminist_religion_trigger = {
 		religion = neognostic
 		religion = ursuline
 		religion = angeline
-		religion = confederated
 		religion = antinomian
 		religion = nonconformist
 		religion = gaian
-		religion = bickertonite
+		religion = neogodbeite
 		religion = strangite
 		religion = neomayan
 		religion = libertarian
-		religion = sol_invicta
-		religion = church_of_erendira
 	}
 }
 
@@ -9394,7 +9468,7 @@ supernatural_events_trigger = {
 		AND = {
 			has_game_rule = { name = supernatural_events value = on }
 			ai = no
-		}  
+		} 
 	}
 }
 
@@ -9402,9 +9476,9 @@ has_native_culture_trigger = {
 	OR = {
 		culture_group = northwest_coast
 		culture_group = plains
-		culture_group = plateau
+		culture_group = interior
 		culture_group = athabaskan
-		culture_group = southwestern
+		culture_group = plateau
 		culture_group = subarctic
 		culture_group = anishinaabe
 		culture_group = eastern_woodlands
@@ -9451,9 +9525,8 @@ has_feminist_religion_trigger = {
 		religion = neomayan
 		religion = nonconformist
 		religion = neognostic
-		religion = confederated
 		religion = antinomian
-		religion = bickertonite
+		religion = neogodbeite
 		religion = strangite
 		religion_group = oldworld
 	}
@@ -9479,7 +9552,7 @@ has_sympathy_trait_trigger = {
 		trait = sympathy_latter_day_saints
 		trait = sympathy_mesoamerican_gods
 		trait = sympathy_oldworld
-		trait = sympathy_pirate
+		trait = sympathy_nautical
 	}
 }
 
@@ -9547,10 +9620,7 @@ religion_openly_espiritista_or_reformed_trigger = {
 	custom_tooltip = {
 		text = religion_openly_espiritista_or_reformed_tooltip
 		hidden_trigger = {
-			OR = {
-				religion = espiritista
-				religion = espiritista_reformed
-			}
+			religion = espiritista
 		}
 	}
 }
@@ -9586,6 +9656,18 @@ religion_openly_trailwalker_or_reformed_trigger = {
 			OR = {
 				religion = trailwalker
 				religion = trailwalker_reformed
+			}
+		}
+	}
+}
+
+religion_openly_aria_de_machete_or_reformed_trigger = {
+	custom_tooltip = {
+		text = religion_openly_aria_de_machete_or_reformed_tooltip
+		hidden_trigger = {
+			OR = {
+				religion = aria_de_machete
+				religion = aria_de_machete_reformed
 			}
 		}
 	}
@@ -9660,6 +9742,8 @@ is_accepting_of_homosexuality_trigger = {
 			trait = way_branch
 			has_character_flag = overridemarriage
 			has_religion_feature = religion_equal
+			has_religion_feature = religion_feature_midewiwin
+			has_religion_feature = religion_feature_aria_de_machete
 		}
 	
 	}
@@ -9712,11 +9796,6 @@ is_muslim_secret_religious_society_member_trigger = {
 	secret_religion_group = muslim
 }
 
-is_muslim_secret_religious_society_member_trigger = {
-	society_member_of = secret_religious_cult
-	secret_religion_group = amero_syncretic
-}
-
 true_religion_midewiwin_or_reformed_trigger = {
 	OR = {
 		true_religion = midewiwin
@@ -9727,10 +9806,421 @@ true_religion_midewiwin_or_reformed_trigger = {
 true_religion_raven_tales_or_reformed_trigger = {
 	OR = {
 		true_religion = raven_tales
-		true_religion = raven_tales
+		true_religion = raven_tales_reformed
 	}
 }
 
 true_religion_group_muslim_group_trigger = {
 	true_religion_group = muslim
+}
+
+have_all_armorsmith_artifacts_all_flags_trigger = {
+	has_artifact = armor_tier_4_guardian
+	has_artifact = armor_tier_4_champion
+	has_artifact = armor_tier_4_warden
+	has_artifact = armor_tier_3_guardian
+	has_artifact = armor_tier_3_champion
+	has_artifact = armor_tier_3_warden
+	has_artifact = armor_tier_2
+	has_artifact = armor_tier_1
+}
+
+have_all_weaponsmith_artifacts_all_flags_trigger = {
+	trigger_if = {
+		limit = {
+			NOR = { 
+				religion_group = muslim 
+				has_dharmic_religion_trigger = yes 
+			}
+		}
+		have_all_weaponsmith_swords_all_flags_trigger = yes
+	}
+	trigger_if = {
+		limit = {
+			OR = { 
+				religion_group = muslim 
+				has_dharmic_religion_trigger = yes 
+			}
+		}
+		have_all_weaponsmith_scimitar_all_flags_trigger = yes
+	}
+	trigger_if = {
+		limit = { is_nomadic = yes }
+		have_all_weaponsmith_bow_all_flags_trigger = yes
+	}
+
+	have_all_weaponsmith_lance_all_flags_trigger = yes
+	have_all_weaponsmith_axe_all_flags_trigger = yes
+	have_all_weaponsmith_mace_all_flags_trigger = yes
+}
+
+have_all_weaponsmith_mace_all_flags_trigger = {
+	has_artifact = mace_tier_4_foe_hammer
+	has_artifact = mace_tier_3_foe_hammer
+    has_artifact = mace_tier_4_bone_breaker
+    has_artifact = mace_tier_3_bone_breaker
+    has_artifact = mace_tier_4_shatterer
+    has_artifact = mace_tier_3_shatterer
+    has_artifact = mace_tier_2_new
+    has_artifact = mace_tier_1_new
+}
+
+have_all_weaponsmith_axe_all_flags_trigger = {
+	has_artifact = axe_tier_4_cleaver
+	has_artifact = axe_tier_3_cleaver
+	has_artifact = axe_tier_4_ravager
+	has_artifact = axe_tier_3_ravager
+	has_artifact = axe_tier_4_marauder
+	has_artifact = axe_tier_3_marauder
+	has_artifact = axe_tier_2_new
+    has_artifact = axe_tier_1_new
+}
+
+have_all_weaponsmith_lance_all_flags_trigger = {
+	has_artifact = lance_tier_4_impaler
+	has_artifact = lance_tier_3_impaler
+	has_artifact = lance_tier_4_trident
+	has_artifact = lance_tier_3_trident
+	has_artifact = lance_tier_4_piercer
+	has_artifact = lance_tier_3_piercer
+	has_artifact = lance_tier_2_new
+    has_artifact = lance_tier_1_new
+}
+
+have_all_weaponsmith_swords_all_flags_trigger = {
+	has_artifact = sword_tier_4_heartseeker
+	has_artifact = sword_tier_3_heartseeker
+	has_artifact = sword_tier_4_vengeance
+    has_artifact = sword_tier_3_vengeance
+    has_artifact = sword_tier_4_fury
+    has_artifact = sword_tier_3_fury
+    has_artifact = sword_tier_2_new
+    has_artifact = sword_tier_1_new
+}
+
+have_all_weaponsmith_scimitar_all_flags_trigger = {
+	has_artifact = scimitar_tier_4_golden
+	has_artifact = scimitar_tier_3_golden
+	has_artifact = scimitar_tier_4_fortune
+	has_artifact = scimitar_tier_3_fortune
+	has_artifact = scimitar_tier_4_conquest
+	has_artifact = scimitar_tier_3_conquest
+	has_artifact = scimitar_tier_2_new
+    has_artifact = scimitar_tier_1_new
+}
+
+have_all_weaponsmith_bow_all_flags_trigger = {
+	has_artifact = bow_tier_4_silent_wind
+	has_artifact = bow_tier_3_silent_wind
+	has_artifact = bow_tier_4_lightning
+	has_artifact = bow_tier_3_lightning
+	has_artifact = bow_tier_4_eagle
+	has_artifact = bow_tier_3_eagle
+	has_artifact = bow_tier_2_new
+	has_artifact = bow_tier_1_new
+}
+
+have_duplicate_goldsmith_artifacts_flag_okay_trigger = {
+	OR = {
+		AND = {
+			OR = {
+					religion_group = christian
+				religion_group = cult_of_saints
+				religion_group = latter_day_saints
+				religion_group = jewish_group
+			}
+			AND = 
+			{
+					has_artifact = the_lily_crown
+					has_artifact = noble_scepter
+				has_artifact = engraved_sword
+		 	}
+		}
+		AND = {
+			OR = {
+				religion_group = muslim
+				religion_group = afro_syncretic
+			}
+			AND = {
+				has_artifact = engraved_dagger
+				has_artifact = silver_bracelets
+			}
+		}
+		AND = {
+			OR = {
+				religion_group = pacific
+				religion_group = indian_group
+			}
+			AND = {
+				has_artifact = engraved_dagger
+				has_artifact = collar_of_pearls
+			}
+		}
+		AND = {
+			religion_group = oldworld
+			AND = {
+				has_artifact = circlet_of_twilight
+				has_artifact = silver_staff
+			}
+		}
+			AND = {
+			OR = {
+				religion = norse_pagan
+				religion = norse_pagan_reformed
+			}
+			AND = {
+				has_artifact = iron_crown
+	 			has_artifact = engraved_sword
+			}
+		}
+		AND = {
+			has_artifact = engraved_crown
+			has_artifact = ceremonial_axe
+			}
+	}
+}
+
+have_duplicate_goldsmith_artifacts_flag_good_trigger = {
+	OR = {
+		AND = {
+			OR = {
+					religion_group = christian
+				religion_group = cult_of_saints
+				religion_group = latter_day_saints
+				religion_group = jewish_group
+			}
+			AND = 
+			{
+					has_artifact = crown_of_pearls
+				has_artifact = ruby_scepter
+				has_artifact = golden_sword
+		 	}
+		}
+		AND = {
+			OR = {
+				religion_group = muslim
+				religion_group = afro_syncretic
+			}
+			AND = {
+				has_artifact = bejeweled_dagger
+				has_artifact = golden_bracelets
+			}
+		}
+		AND = {
+			OR = {
+				religion_group = pacific
+				religion_group = indian_group
+			}
+			AND = {
+				has_artifact = bejeweled_dagger
+				has_artifact = necklace_of_radiance
+			}
+		}
+		AND = {
+			religion_group = oldworld
+			AND = {
+				has_artifact = circlet_of_the_heavens
+				has_artifact = golden_staff
+			}
+		}
+			AND = {
+			OR = {
+				religion = norse_pagan
+				religion = norse_pagan_reformed
+			}
+			AND = {
+				has_artifact = crown_of_the_sea
+				has_artifact = golden_sword
+			}
+		}
+		AND = {
+			has_artifact = amber_crown
+			has_artifact = obsidian_axe
+			}
+	}
+}
+
+have_duplicate_goldsmith_artifacts_flag_expensive_trigger = {
+	OR = {
+		AND = {
+			OR = {
+					religion_group = christian
+				religion_group = cult_of_saints
+				religion_group = latter_day_saints
+				religion_group = jewish_group
+			}
+			AND = 
+			{
+					has_artifact = crown_of_majesty
+			 	has_artifact = emerald_scepter
+				has_artifact = sword_of_heroes
+		 	}
+		}
+		AND = {
+			OR = {
+				religion_group = muslim
+				religion_group = afro_syncretic
+			}
+			AND = {
+				has_artifact = dagger_of_glory
+				has_artifact = ruby_bracelets
+			}
+		}
+		AND = {
+			OR = {
+				religion_group = pacific
+				religion_group = indian_group
+			}
+			AND = {
+				has_artifact = dagger_of_glory
+				has_artifact = celestial_necklace
+			}
+		}
+		AND = {
+			religion_group = oldworld
+			AND = {
+				has_artifact = circlet_of_the_heavens
+				has_artifact = staff_of_majesty
+			}
+		}
+			AND = {
+			OR = {
+				religion = norse_pagan
+				religion = norse_pagan_reformed
+			}
+			AND = {
+				has_artifact = crown_of_crows
+				has_artifact = sword_of_heroes
+			}
+		}
+		AND = {
+			has_artifact = heros_crown
+			has_artifact = axe_of_the_ancestors
+			}
+	}
+}
+
+have_duplicate_goldsmith_artifacts_flag_amazing_trigger = {
+	OR = {
+		AND = {
+			OR = {
+				religion_group = christian
+				religion_group = cult_of_saints
+				religion_group = latter_day_saints
+				religion_group = jewish_group
+			}
+			AND = 
+			{
+					has_artifact = crown_of_majesty_2
+			 	has_artifact = emerald_scepter_2
+				has_artifact = sword_of_heroes_2
+		 	}
+		}
+		AND = {
+			OR = {
+				religion_group = muslim
+				religion_group = afro_syncretic
+			}
+			AND = {
+				has_artifact = dagger_of_glory_2
+				has_artifact = ruby_bracelets_2
+			}
+		}
+		AND = {
+			OR = {
+				religion_group = pacific
+				religion_group = indian_group
+			}
+			AND = {
+				has_artifact = dagger_of_glory_2
+				has_artifact = celestial_necklace_2
+			}
+		}
+		AND = {
+			religion_group = oldworld
+			AND = {
+				has_artifact = circlet_of_the_heavens_2
+				has_artifact = staff_of_majesty_2
+			}
+		}
+		AND = {
+			OR = {
+				religion = norse_pagan
+				religion = norse_pagan_reformed
+			}
+			AND = {
+				has_artifact = crown_of_crows_2
+				has_artifact = sword_of_heroes_2
+			}
+		}
+		AND = {
+			has_artifact = heros_crown_2
+			has_artifact = axe_of_the_ancestors_2
+		}
+	}
+}
+
+has_neomayan_patron_trigger = {
+	OR = {
+		has_character_modifier = patron_hunab_ku
+		has_character_modifier = patron_acquarius
+		has_character_modifier = patron_pacal_votan
+		has_character_modifier = patron_valum_votan
+	}
+}
+
+has_machete_blessing_trigger = {
+	OR = {
+		has_character_modifier = machete_blessing_nomad
+		has_character_modifier = machete_blessing_notnomad
+		has_character_modifier = machete_curse_nomad
+		has_character_modifier = machete_curse_notnomad
+	}
+}
+
+has_machete_strength_prayer_trigger = {
+	OR = {
+		has_character_modifier = machete_cazadiablos
+		has_character_modifier = machete_strength_prayer_cooldown
+	}
+}
+
+has_machete_fertility_prayer_trigger = {
+	OR = {
+		has_character_modifier = machete_high_libido
+		has_character_modifier = machete_low_libido
+	}
+}
+
+has_patria_vision_trigger = {
+	OR = {
+		has_character_modifier = patria_vision_beauty
+		has_character_modifier = patria_vision_loss
+		has_character_modifier = patria_vision_power
+		has_character_modifier = patria_vision_defeat
+		has_character_modifier = patria_vision_madness
+		has_character_modifier = patria_vision_love
+		has_character_modifier = patria_vision_cooldown #lasts 3 years
+	}
+}
+
+espiritista_consulted_court_trigger = {
+	OR = {
+		has_character_modifier = espiritista_indigenous_court
+		has_character_modifier = espiritista_black_court
+		has_character_modifier = espiritista_medical_court
+		has_character_modifier = espiritista_teacher_court
+		has_character_modifier = espiritista_juans_court
+		has_character_modifier = espiritista_celestial_court
+		has_character_modifier = espiritista_political_court
+		has_character_modifier = espiritista_viking_court
+		has_character_modifier = espiritista_malandros_court
+	}
+}
+has_atomicist_particle_trigger = {
+	OR = {
+		has_character_modifier = atomicist_quark
+		has_character_modifier = atomicist_lepton
+		has_character_modifier = atomicist_boson
+	}
 }
