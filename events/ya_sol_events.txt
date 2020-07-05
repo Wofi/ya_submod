@@ -172,35 +172,10 @@ narrative_event = { # Sol Invicta pope
 					NOT = { religion = sol_invicta }
 					religion_group = mesoamerican_gods
 				}
-				AND = {
-					OR = {
-						religion = aphite
-						religion = atomicist
-					}
-					OR = {
-						culture_group = mexicano
-						culture_group = chicano
-						culture_group = west_anglo
-						culture_group = southwestern
-						culture = plautdietsch
-					}
+				OR = {
+					religion = aphite
+					religion = atomicist
 				}
-			}
-		}
-	}
-	option = {
-		name = EVTOPTF_solref
-		trigger = {
-			OR = {
-				religion = aphite
-				religion = atomicist
-			}
-			NOR = {
-				culture_group = mexicano
-				culture_group = chicano
-				culture_group = west_anglo
-				culture_group = southwestern
-				culture = plautdietsch
 			}
 		}
 	}
@@ -359,35 +334,10 @@ narrative_event = { # Sol Invicta becomes Church of Erendira religious head
 					NOT = { religion = church_of_erendira }
 					religion_group = mesoamerican_gods
 				}
-				AND = {
-					OR = {
-						religion = aphite
-						religion = atomicist
-					}
-					OR = {
-						culture_group = mexicano
-						culture_group = chicano
-						culture_group = west_anglo
-						culture_group = southwestern
-						culture = plautdietsch
-					}
+				OR = {
+					religion = aphite
+					religion = atomicist
 				}
-			}
-		}
-	}
-	option = {
-		name = EVTOPTF_solref # may no longer be necessary
-		trigger = {
-			OR = {
-				religion = aphite
-				religion = atomicist
-			}
-			NOR = { 
-				culture_group = mexicano
-				culture_group = chicano
-				culture_group = west_anglo
-				culture_group = southwestern
-				culture = plautdietsch
 			}
 		}
 	}
@@ -493,41 +443,16 @@ narrative_event = { # Church of Erendira religious head
 		trigger = {
 			OR = {
 				religion = falling_star
-				religion = gracia_divina
+				religion = patria_grande
 				AND = {
 					NOT = { religion = sol_invicta }
 					NOT = { religion = church_of_erendira }
 					religion_group = mesoamerican_gods
 				}
-				AND = {
-					OR = {
-						religion = aphite
-						religion = atomicist
-					}
-					OR = {
-						culture_group = mexicano
-						culture_group = chicano
-						culture_group = west_anglo
-						culture_group = southwestern
-						culture = plautdietsch
-					}
+				OR = {
+					religion = aphite
+					religion = atomicist
 				}
-			}
-		}
-	}
-	option = {
-		name = EVTOPTF_solref
-		trigger = {
-			OR = {
-				religion = aphite
-				religion = atomicist
-			}
-			NOR = {
-				culture_group = mexicano
-				culture_group = chicano
-				culture_group = west_anglo
-				culture_group = southwestern
-				culture = plautdietsch
 			}
 		}
 	}
