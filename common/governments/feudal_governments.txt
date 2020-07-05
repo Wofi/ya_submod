@@ -30,11 +30,13 @@ feudal_governments = {
 				religion = imamite
 				religion = revivalist
 				religion = alawiyya
-				religion = qingzheng
+				religion = qingzhen
 				religion = exovedate
 				religion = nousthreskeia
-				religion_group = pagan_group
+				religion = sol_invicta
 				religion = church_of_erendira
+				religion = patria_grande
+				religion_group = pagan_group
 				has_religion_feature = religion_temporal_head
 				AND = {
 					OR = {
@@ -46,17 +48,19 @@ feudal_governments = {
 						religion = imamite
 						religion = revivalist
 						religion = alawiyya
-						religion = qingzheng
+						religion = qingzhen
 						religion = exovedate
 						religion = nousthreskeia
+						religion = sol_invicta
+						religion = church_of_erendira
+						religion = patria_grande
 					}
 					has_religion_features = no # Old saves, and campaigns without HF, need the Fylkirate to continue working
 				}
 			}
 			NOT = {	religion = cetic }
 			NOT = {	religion = imamite }
-			NOT = {	religion = qingzheng }
-			NOT = {	religion_group = latter_day_saints }
+			NOT = {	religion = qingzhen }
 			NOR = {
 				religion = traditionalist
 				religion = revivalist
@@ -66,6 +70,7 @@ feudal_governments = {
 			}
 
 			NOT = { is_government_potential = roman_imperial_government }
+			NOT = { is_government_potential = mormon_government }
 			NOT = { is_government_potential = order_government }
 			#NOT = { is_government_potential = colonial_government }
 			NOT = { is_government_potential = military_governorate }
@@ -188,6 +193,7 @@ feudal_governments = {
 		frame_suffix = "_mormon"
 		title_prefix = "mormon_government_"
 		potential = {
+			# what the fuck, ateff devs?
 			OR = {
 				controls_religion = no
 				religion = cetic
@@ -198,9 +204,11 @@ feudal_governments = {
 				religion = rust_cultist
 				religion = revivalist
 				religion = alawiyya
-				religion = qingzheng
+				religion = qingzhen
 				religion = exovedate
 				religion = nousthreskeia
+				religion = sol_invicta
+				religion = patria_grande
 				religion_group = latter_day_saints
 				has_religion_feature = religion_temporal_head
 				AND = {
@@ -213,14 +221,17 @@ feudal_governments = {
 						religion = imamite
 						religion = revivalist
 						religion = alawiyya
-						religion = qingzheng
+						religion = qingzhen
 						religion = exovedate
 						religion = nousthreskeia
+						religion = sol_invicta
+						religion = patria_grande
 					}
 					has_religion_features = no # Old saves, and campaigns without HF, need the Fylkirate to continue working
 				}
 			}
 			religion_group = latter_day_saints
+			NOT = { religion = neogodbeite }
 			NOT = { is_government_potential = colonial_government }
 			NOT = { is_government_potential = roman_imperial_government }
 			NOT = { is_government_potential = order_government }
@@ -285,9 +296,11 @@ feudal_governments = {
 				religion = rust_cultist
 				religion = revivalist
 				religion = alawiyya
-				religion = qingzheng
+				religion = qingzhen
 				religion = exovedate
 				religion = nousthreskeia
+				religion = sol_invicta
+				religion = patria_grande
 				has_religion_feature = religion_temporal_head
 				AND = {
 					OR = {
@@ -299,16 +312,18 @@ feudal_governments = {
 						religion = imamite
 						religion = revivalist
 						religion = alawiyya
-						religion = qingzheng
+						religion = qingzhen
 						religion = exovedate
 						religion = nousthreskeia
+						religion = sol_invicta
+						religion = patria_grande
 					}
 					has_religion_features = no # Old saves, and campaigns without HF, need the Fylkirate to continue working
 				}
 			}
 			OR = {
 				religion = cetic
-				religion = qingzheng
+				religion = qingzhen
 				religion = imamite
 			}
 			is_patrician = no
@@ -373,9 +388,11 @@ feudal_governments = {
 				religion = imamite
 				religion = revivalist
 				religion = alawiyya
-				religion = qingzheng
+				religion = qingzhen
 				religion = exovedate
 				religion = nousthreskeia
+				religion = sol_invicta
+				religion = patria_grande
 				religion_group = pagan_group
 				has_religion_feature = religion_temporal_head
 				AND = {
@@ -388,9 +405,11 @@ feudal_governments = {
 						religion = imamite
 						religion = revivalist
 						religion = alawiyya
-						religion = qingzheng
+						religion = qingzhen
 						religion = exovedate
 						religion = nousthreskeia
+						religion = sol_invicta
+						religion = patria_grande
 					}
 					has_religion_features = no # Old saves, and campaigns without HF, need the Fylkirate to continue working
 				}
@@ -546,6 +565,7 @@ feudal_governments = {
 				}
 			}
 			is_patrician = no
+			NOT = { is_government_potential = military_governorate }
 		}
 		
 		color = { 143 12 125 }
