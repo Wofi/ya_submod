@@ -13,9 +13,8 @@ ported features
 - judged by zun event chain
 - matriarchal deposition war cb
 
-planned features
-- more flavorful localisation for sol invicta
-- port more zun events
-
-the far future
-- who knows?
+future
+- incan offmap empire?
+- inti-inspired faith?
+- third path for sol?
+- Lucifer?
