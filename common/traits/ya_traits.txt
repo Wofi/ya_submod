@@ -19,6 +19,8 @@ warrior_of_sunlight = {
 		hivernant
 		cavalier
 		medal_of_honor
+		patriota
+		joropo_cantor
 	}
 	
 	martial = 2
