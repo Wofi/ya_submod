@@ -322,3 +322,25 @@
 	}
 	2700.7.13 = {death=yes}
 }
+
+1933044={
+	name="Roland"
+	dynasty=1791001
+	dna="jedhkgebhdp"
+	culture=riverlander
+	religion=revelationist
+	father=1933076
+	martial=6
+	diplomacy=5
+	stewardship=4
+	intrigue=4
+	learning=2
+	trait=tough_soldier
+	trait=hunter
+	trait=shy
+	trait=brave
+	trait=paranoid
+	2630.1.1={birth=yes}
+	2651.7.22={add_spouse=1933045}
+	2677.10.17={death=yes}
+}
