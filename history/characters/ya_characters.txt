@@ -280,8 +280,9 @@
 }
 
 4000000 = {
-	name = "Tsuya"
+	name = "Clara"
 	female = yes
+	dna="dcbagvfckdo"
 	dynasty = 4000000
 	culture = rostmann
 	religion = hamiltonian
@@ -295,5 +296,51 @@
 	trait = deceitful
 	trait = cynical
 	2645.3.16 = {birth=yes}
+	2666.7.3 = {employer=1821003}
 	2700.7.13 = {death=yes}
+}
+
+4000001 = {
+	name = "Wilfred"
+	dna="daabdlicidb"
+	dynasty = 4000001
+	culture = mountainer
+	religion = neogodbeite
+	trait = skilled_tactician
+	trait = siege_leader
+	trait = pilgrim
+	trait = duelist
+	trait = bastard
+	trait = just
+	trait = content
+	trait = humble
+	trait = patient
+	2641.5.11 = {birth=yes}
+	2666.7.3 = { 
+		give_nickname=nick_the_unlucky
+		employer=1890020
+	}
+	2700.7.13 = {death=yes}
+}
+
+1933044={
+	name="Roland"
+	dynasty=1791001
+	dna="jedhkgebhdp"
+	culture=riverlander
+	religion=revelationist
+	father=1933076
+	martial=6
+	diplomacy=5
+	stewardship=4
+	intrigue=4
+	learning=2
+	trait=tough_soldier
+	trait=hunter
+	trait=shy
+	trait=brave
+	trait=paranoid
+	2630.1.1={birth=yes}
+	2651.7.22={add_spouse=1933045}
+	2677.10.17={death=yes}
 }

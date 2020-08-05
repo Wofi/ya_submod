@@ -1,2 +1,16 @@
 1260046 = { name="Korachi" culture=raramuri }
 4000000 = { name="Driscoll" culture=rostmann }
+4000001 = { name="of the Vale" culture=mountainer 
+	coat_of_arms = {
+		religion = mormon
+		template = 0
+		layer = {
+			texture = 0
+			texture_internal = 12
+			emblem = 0
+			color = 0
+			color = 13
+			color = 1
+		}
+	}
+}

@@ -31,7 +31,11 @@ theocracy_governments = {
 				controls_religion = yes
 			}
 			NAND = { #prevents theodem frickery
-				religion_group = latter_day_saints
+				OR = { 
+					religion = woolleyite
+					religion = mormon
+					religion = strangite
+				}
 				controls_religion = no
 				OR = {
 					tier = duke
@@ -56,7 +60,7 @@ theocracy_governments = {
 				controls_religion = yes
 			}
 			NAND = {
-				religion = qingzheng
+				religion = qingzhen
 				controls_religion = yes
 			}
 			NAND = {
@@ -68,11 +72,19 @@ theocracy_governments = {
 				controls_religion = yes
 			}
 			NAND = {
-				religion = rust_cultist
+				religion = church_of_erendira
 				controls_religion = yes
 			}
 			NAND = {
-				religion = church_of_erendira
+				religion = patria_grande
+				controls_religion = yes
+			}
+			NAND = {
+				religion = atomicist
+				controls_religion = yes
+			}
+			NAND = {
+				religion = celeste
 				controls_religion = yes
 			}
 			#???? why don't ursulines work
