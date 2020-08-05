@@ -5,17 +5,17 @@ it's "yet another submod" for After the End Fan Fork v1.1d
 please enjoy.
 
 features
-- make sol invicta feminist
-- add endgame decision and religious head
-- sol invicta heresy w/ bloodline
-- judged by zun event chain
+- made sol invicta feminist
+- sol invicta rulers who own tenochtitlan and two other holy sites may decide the future of the faith...
+- a new heresy which might appear by event
+- ported judged by zun event chain from vanilla
 
 new features
-- ported matriarchal deposition war cb
-- ported gaian anti-agnatic event
+- added holy fury's matriarchal deposition CB to gaian, sol invicta, and CoE
+- priestesses of erendira will now ask you to change your succession law if it's agnatic (ported from AtEFF event gaian.10)
 
 future
-- incan offmap empire?
-- inti-inspired faith?
-- third path for sol?
-- Lucifer?
+- tawantinsuyu?
+- inti?
+- a third way?
+- lucifer?
