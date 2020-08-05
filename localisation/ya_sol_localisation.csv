@@ -78,3 +78,9 @@ secret_religious_society_church_of_erendira_leader_desc;The High Priest, leading
 warrior_of_sunlight;Warrior of Sunlight;;;;;;;;;;;;;x
 
 matriarchal_deposition_war_nonpagan_desc;No [Root.GetOppositeManWoman] should be allowed to hold as much authority as $TARGET$ does. We are well within our rights to force this vile tyrant to abdicate his throne, leaving his realm in the capable hands of a [Root.GetManWoman].;Il ne devrait pas être permis à un[Root.Get_EOpp] [Root.GetOppositeManWoman] de détenir autant de pouvoir que l'illégitime $TARGET$ en a. Nous sommes dans nos droits de forcer ce tyran à abdiquer le trône, laissant son pays entre les mains adroites d'un[Root.Get_E] [Root.GetManWoman].;K[Root.GeteineineOpp] [Root.GetOppositeManWoman] sollte so viel Autorität besitzen wie $TARGET$. Es ist unser Recht diesen abscheulichen Tyrannen dazu zu zwingen den Thron abzutreten und das Reich in die Hände [Root.Geteineseiner] fähigeren [Root.GetManWoman] zu legen.;;Un[Root.GetOAOpp] [Root.GetOppositeManWoman] no debería tener tanto poder como el que tiene $TARGET$. Tenemos todo el derecho para obligar a semejante tiran[Root.GetOA] a abdicar del trono para dejar el reino en las manos más capaces de un[Root.GetXA] [Root.GetManWoman];;;;;;;;x
+
+EVTDESC_sol_laws;The priestesses have informed you that the patriarchal laws of [Root.PrimaryTitle.GetName] are unacceptable. They ask you to choose.\n\nDo you serve the Light or the Darkness?;;;;;;;;;;;;x
+EVTOPT_sol_law_enat;I only serve the Light!;;;;;;;;;;;;x
+EVTOPT_sol_law_en_cog;The word of Eréndira is law.;;;;;;;;;;;;x
+EVTOPT_sol_law_true_cog;The law must be even-handed.;;;;;;;;;;;;x
+EVTOPT_sol_law_refuse;I will not be controlled by meddling priestesses.;;;;;;;;;;;;x

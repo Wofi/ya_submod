@@ -1,17 +1,18 @@
 ya_submod by aeras
 
-it's "yet another submod" for After the End Fan Fork
+it's "yet another submod" for After the End Fan Fork v1.1d
 
 please enjoy.
 
-new features
+features
 - make sol invicta feminist
 - add endgame decision and religious head
 - sol invicta heresy w/ bloodline
-
-ported features
 - judged by zun event chain
-- matriarchal deposition war cb
+
+new features
+- ported matriarchal deposition war cb
+- ported gaian anti-agnatic event
 
 future
 - incan offmap empire?
