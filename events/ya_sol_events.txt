@@ -327,6 +327,8 @@ narrative_event = { # Sol Invicta becomes Church of Erendira religious head
 		name = EVTOPTE_solref
 		trigger = {
 			OR = {
+				religion = aphite
+				religion = atomicist
 				religion = falling_star
 				religion = patria_grande
 				AND = {
@@ -334,19 +336,17 @@ narrative_event = { # Sol Invicta becomes Church of Erendira religious head
 					NOT = { religion = church_of_erendira }
 					religion_group = mesoamerican_gods
 				}
-				OR = {
-					religion = aphite
-					religion = atomicist
-				}
 			}
 		}
 	}
 	option = {
 		name = EVTOPTG_solref
 		trigger = {
-			religion = gaian
-			trait = machete_female
-			trait = machete_female_ref
+			OR = { // RIP bug where Gaians became COE, May 10th to August 10th 2020
+				religion = gaian
+				trait = machete_female
+				trait = machete_female_ref
+			}
 		}
 	}
 }
