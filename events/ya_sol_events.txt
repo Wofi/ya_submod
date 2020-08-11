@@ -2,7 +2,6 @@ namespace = ya_sol
 
 character_event = { # Sol Invicta soft reform choice
 	id = ya_sol.1
-	# title = EVTNAME_solreorg
 	desc = EVTDESC_solreorg
 	picture = GFX_evt_cathedral
 	border = GFX_event_normal_frame_religion
@@ -918,6 +917,96 @@ character_event = {
 			factor = 25
 			modifier = { factor = 0 is_female = yes }
 			modifier = { factor = 0.2 trait = zealous }
+		}
+	}
+}
+
+narrative_event = {
+	id = ya_sol.21
+	title = EVTNAME200
+	picture = GFX_evt_battle
+	border = GFX_event_narrative_frame_war
+	
+	desc = {
+		text = EVTDESC_sol_ghw
+		trigger = {
+			OR = {
+				new_character = {
+					NOT = { religion_group = christian }
+					NOT = { religion_group = cult_of_saints }
+					NOT = { religion_group = mesoamerican_gods }
+					NOT = { religion = atomicist }
+				}
+				has_alternate_start_parameter = { key = religion_names value = random }
+			}
+		}
+	}
+	desc = {
+		text = EVTDESC_sol_ghw_meso
+		trigger = {
+			new_character = {
+				religion_group = mesoamerican_gods
+				religion = atomicist
+			}
+			NOT = {
+				has_alternate_start_parameter = { key = religion_names value = random }
+			}
+		}
+	}
+	desc = {
+		text = EVTDESC_sol_ghw_christ
+		trigger = {
+			new_character = {
+				OR = {
+					religion_group = christian
+					religion_group = cult_of_saints
+				}
+			}
+			NOT = {
+				has_alternate_start_parameter = { key = religion_names value = random }
+			}
+		}
+	}
+	
+	is_triggered_only = yes
+	major = yes
+	show_ROOT = yes
+	hide_new = yes
+	
+	trigger = {
+		can_call_crusade = yes
+		ROOT = { religion = church_of_erendira }
+	}
+	
+	option = {
+		name = EVTOPT_ya_sol_ghw
+		trigger = { religion = ROOT }
+	}
+	option = {
+		name = EVTOPTB200 # No concern of ours
+		trigger = {
+			NOT = { religion = ROOT }
+			new_character = {
+				NOT = { religion = PREV }
+				NOT = { character = PREV }
+			}
+		}
+	}
+	option = {
+		name = EVTOPTD200 # To Arms!
+		trigger = {
+			new_character = {
+				character = PREV
+			}
+		}
+	}
+	option = {
+		name = EVTOPTE200 # Terrible News!
+		trigger = {
+			new_character = {
+				religion = PREV
+				NOT = { character = PREV }
+			}
 		}
 	}
 }
