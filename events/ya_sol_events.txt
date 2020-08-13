@@ -458,7 +458,11 @@ narrative_event = { # Church of Erendira religious head
 	option = {
 		name = EVTOPTG_solref
 		trigger = {
-			religion = gaian
+			OR = {
+				religion = gaian
+				trait = machete_female
+				trait = machete_female_ref
+			}
 		}
 	}
 }
