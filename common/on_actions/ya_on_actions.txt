@@ -1,0 +1,5 @@
+on_crusade_creation = {
+	events = {
+		ya_sol.21 # Church of Erendira
+	}
+}

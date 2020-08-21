@@ -86,7 +86,7 @@ EVTOPT_sol_law_true_cog;The law must be even-handed.;;;;;;;;;;;;x
 EVTOPT_sol_law_refuse;I will not be controlled by meddling priestesses.;;;;;;;;;;;;x
 
 EVTDESC_sol_ghw;Our [Root.GetTitledFirstName] has declared a [Root.Religion.GetCrusadeName] against [New.GetTitledName] and the adherents of '[New.Religion.GetHighGodName]' in the [From.GetFullBaseName]! All true [Root.Religion.GetName] adherents are called to arms in the name of [Root.Religion.GetHighGodName]!\n\nMay the light of Eréndira purify these infidels!;;;;;;;;;;;;x
-EVTDESC_sol_ghw_christ;Our [Root.GetTitledFirstName] has declared a [Root.Religion.GetCrusadeName] against [New.GetTitledName] and the adherents of '[New.Religion.GetHighGodName]' in the [From.GetFullBaseName]! All true [Root.Religion.GetName] adherents are called to arms in the name of [Root.Religion.GetHighGodName]!\n\nThe Light shall shine again in [From.GetName];;;;;;;;;;;;x
+EVTDESC_sol_ghw_christ;Our [Root.GetTitledFirstName] has declared a [Root.Religion.GetCrusadeName] against [New.GetTitledName] and the adherents of '[New.Religion.GetHighGodName]' in the [From.GetFullBaseName]! All true [Root.Religion.GetName] adherents are called to arms in the name of [Root.Religion.GetHighGodName]!\n\nThe Light shall shine again in [From.GetName]!;;;;;;;;;;;;x
 EVTDESC_sol_ghw_meso;Our [Root.GetTitledFirstName] has declared a [Root.Religion.GetCrusadeName] against [New.GetTitledName] and the adherents of '[New.Religion.GetHighGodName]' in the [From.GetFullBaseName]! All true [Root.Religion.GetName] adherents are called to arms in the name of [Root.Religion.GetHighGodName]!\n\nWe shall disabuse them of their false sun god!;;;;;;;;;;;;x
 
 EVTOPT_ya_sol_ghw;The darkness will never prevail!;;;;;;;;;;;;x
